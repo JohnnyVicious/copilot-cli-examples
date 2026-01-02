@@ -18,7 +18,7 @@ This directory contains Rust best practices and common mistakes discovered durin
 
 **[quick-reference.md](quick-reference.md)** - Scannable checklist of all rules
 
-- ~400 lines covering 20 lessons
+- ~700 lines covering 21 lessons
 - Each lesson: Rule + Quick check + 1 example + Link to deep dive
 - Perfect for code review or quick lookup
 - Can be scanned in under 2 minutes
