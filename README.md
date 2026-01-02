@@ -46,6 +46,7 @@ copilot-cli-examples/
 - Open a challenge markdown file and ask Copilot to explain the problem, outline approaches, or draft test cases.
 - Iterate on your solution while requesting refactors, complexity analysis, or alternative strategies.
 - Use the best practices doc as a checklist for prompting and review.
+- For built-in skills (brainstorming, parallel dispatching, subagent-driven development, worktrees, writing skills, and requesting code review) see `.claude/skills/`; the code review skill uses agent_type `code-reviewer` with the template at `requesting-code-review/code-reviewer.md`.
 
 ## 🛠️ Development
 
