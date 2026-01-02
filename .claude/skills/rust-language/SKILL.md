@@ -981,3 +981,9 @@ let speed = calculate_speed(Meters(100.0), Seconds(9.8));
 - **Use the type system**: Let the compiler catch errors
 - **Test thoroughly**: Tests are first-class in Rust
 - **Use clippy**: Catch common mistakes and non-idiomatic code
+
+---
+
+## Sources
+
+See [sources.md](sources.md) for documentation references used to create this skill.
