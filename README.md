@@ -1,12 +1,13 @@
 # GitHub Copilot CLI Examples
 
-A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curated coding challenges and accompanying documentation.
+A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curated coding challenges and accompanying documentation, especially for teams on GitHub Copilot Business who do not have Codex CLI access.
 
 ## 🎯 Purpose
 
 - Demonstrate Copilot CLI workflows end to end
 - Provide ready-to-use challenges for practicing algorithmic problem solving
 - Offer guidance on setup and best practices when working with Copilot
+- Show how Copilot CLI alone can deliver productive, high-quality results without Codex CLI access
 
 ## 📂 Repository Structure
 
