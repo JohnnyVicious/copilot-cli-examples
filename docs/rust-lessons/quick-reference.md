@@ -226,7 +226,7 @@ for item in items {
 }
 ```
 
-📖 **[Full Guide: Performance →](performance-deep-dive.md#loop-optimizations)**
+📖 **[Full Guide: Performance →](performance-deep-dive.md#1-performance-critical-loop-optimizations)**
 
 ---
 
@@ -254,7 +254,7 @@ let keyword_lower = "hello".to_lowercase();
 text_lower.contains(&keyword_lower)
 ```
 
-📖 **[Full Guide: Performance →](performance-deep-dive.md#zero-copy)**
+📖 **[Full Guide: Performance →](performance-deep-dive.md#2-when-not-to-use-zero-copy-abstractions)**
 
 ---
 
@@ -280,7 +280,7 @@ temp.sync_all()?;
 temp.persist(final_path)?;  // Atomic rename
 ```
 
-📖 **[Full Guide: File I/O →](file-io-deep-dive.md#atomic-writes)**
+📖 **[Full Guide: File I/O →](file-io-deep-dive.md#1-atomic-file-writes)**
 
 ---
 
@@ -304,7 +304,7 @@ if let Some(parent) = path.parent() {
 fs::write(path, data)?;
 ```
 
-📖 **[Full Guide: File I/O →](file-io-deep-dive.md#parent-directories)**
+📖 **[Full Guide: File I/O →](file-io-deep-dive.md#2-parent-directory-creation)**
 
 ---
 
@@ -366,7 +366,7 @@ fn test_write_and_read_roundtrip() {
 }
 ```
 
-📖 **[Full Guide: File I/O →](file-io-deep-dive.md#testing)**
+📖 **[Full Guide: File I/O →](file-io-deep-dive.md#4-testing-file-io)**
 
 ---
 
@@ -395,7 +395,7 @@ if !VALID_EVENTS.contains(&event) {
 pub enum HookEvent { UserPromptSubmit, ... }
 ```
 
-📖 **[Full Guide: Type Safety →](type-safety-deep-dive.md#constants)**
+📖 **[Full Guide: Type Safety →](type-safety-deep-dive.md#2-using-constants-for-validation)**
 
 ---
 
@@ -519,7 +519,7 @@ for item in other.vec {
 }
 ```
 
-📖 **[Full Guide: Common Footguns →](common-footguns.md#borrow-checker)**
+📖 **[Full Guide: Common Footguns →](common-footguns.md#3-borrow-checker-with-hashset)**
 
 ---
 
@@ -549,7 +549,7 @@ match fs::read(path) {
 }
 ```
 
-📖 **[Full Guide: Common Footguns →](common-footguns.md#toctou-races)**
+📖 **[Full Guide: Common Footguns →](common-footguns.md#2-toctou-races)**
 
 ---
 

@@ -37,14 +37,19 @@ Note: Copilot may take longer to respond. Use appropriate timeout values (up to 
 Execute copilot in the current working directory using this pattern:
 
 ```bash
-copilot --model MODEL_NAME --allow-all-paths --allow-all-tools --log-level none -p "PROMPT_TEXT" 2>/dev/null
+copilot --model MODEL_NAME --log-level none -p "PROMPT_TEXT" 2>/dev/null
 ```
 
 Required flags:
 
-- `--allow-all-paths` - Allow access to all paths
-- `--allow-all-tools` - Allow all tool usage
 - `--log-level none` - Suppress log output
+
+Optional flags (add only when needed):
+
+- `--allow-all-paths` - Add when copilot needs to read files outside the current directory
+- `--allow-all-tools` - Add when copilot needs to execute commands or use external tools
+
+**Principle of least privilege:** Start without permission flags. Only add them if the task requires file access or tool execution.
 
 The command runs in the current working directory, providing copilot with the same context as Claude.
 
