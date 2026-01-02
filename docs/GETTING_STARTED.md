@@ -6,14 +6,12 @@ This repository pairs GitHub Copilot CLI with a curated set of coding challenges
 ## What's Inside
 - **challenges/** — Nine challenges split across easy, medium, and hard.
 - **docs/** — This guide plus BEST_PRACTICES for prompting, testing, and security.
-- **setup.py** — Checks Python version and verifies the repo layout.
-- **validate.py** — Ensures required docs and challenge files exist.
+- **.claude/skills/** — Built-in skills to boost Copilot CLI workflows.
 
 ## Quick Start
-1. `python setup.py` — confirm your Python version and folder layout.
-2. `python validate.py` — verify the repository is intact.
-3. Open `challenges/<difficulty>/*.md` — read the prompt, constraints, and hints.
-4. Iterate with Copilot CLI — ask for approach outlines, edge cases, and test ideas.
+1. Open `docs/GETTING_STARTED.md` — you are here.
+2. Open `challenges/<difficulty>/*.md` — read the prompt, constraints, and hints.
+3. Iterate with Copilot CLI — ask for approach outlines, edge cases, and test ideas.
 
 ## Working Through a Challenge
 1. Read the problem statement and examples.
@@ -30,4 +28,3 @@ This repository pairs GitHub Copilot CLI with a curated set of coding challenges
 ## Contributing
 - Place new challenges under `challenges/<difficulty>/` with clear statements, examples, and hints.
 - Update documentation when adding or modifying content.
-- Keep validation passing by running `python validate.py`.

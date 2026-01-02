@@ -4,10 +4,9 @@
 
 - **Challenges**: Nine algorithmic problems (easy/medium/hard) with prompts, constraints, and hints.
 - **Documentation**: Getting started guidance and best practices for working with Copilot CLI.
-- **Utilities**: Lightweight setup and validation scripts to keep the repo tidy.
+- **Skills**: Built-in prompting skills under `.claude/skills/` to accelerate Copilot CLI workflows.
 
 ## How to Use
 
-1. Run `python setup.py` to verify your environment.
-2. Run `python validate.py` to ensure required files are present.
-3. Read `docs/GETTING_STARTED.md` and pick a challenge from `challenges/`.
+1. Read `docs/GETTING_STARTED.md` for the workflow overview.
+2. Pick a challenge from `challenges/` and work through it with Copilot CLI.

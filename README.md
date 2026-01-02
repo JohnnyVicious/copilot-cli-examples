@@ -20,17 +20,13 @@ copilot-cli-examples/
 ├── docs/
 │   ├── BEST_PRACTICES.md
 │   └── GETTING_STARTED.md
-├── setup.py
-├── validate.py
 └── README.md
 ```
 
 ## 🚀 Quick Start
 
-1. **Setup**: `python setup.py` (checks Python version and repository layout)
-2. **Validate**: `python validate.py` (verifies challenges and documentation exist)
-3. **Read**: `docs/GETTING_STARTED.md` for workflow guidance
-4. **Practice**: Open any file in `challenges/` and work through the prompts with Copilot
+1. **Read**: `docs/GETTING_STARTED.md` for workflow guidance
+2. **Practice**: Open any file in `challenges/` and work through the prompts with Copilot
 
 ## 📖 What's Included
 
@@ -38,9 +34,8 @@ copilot-cli-examples/
 - **Documentation**:
   - `docs/GETTING_STARTED.md` — onboarding and Copilot CLI tips
   - `docs/BEST_PRACTICES.md` — conventions, testing strategies, and security notes
-- **Utilities**:
-  - `setup.py` — environment/version checks
-  - `validate.py` — quick integrity verification for docs and challenge files
+- **Skills**:
+  - `.claude/skills/` — reusable prompting skills (brainstorming, parallel dispatching, subagent-driven development, worktrees, writing skills, requesting code review)
 
 ## 🤖 Using Copilot CLI Here
 
@@ -51,7 +46,6 @@ copilot-cli-examples/
 
 ## 🛠️ Development
 
-- Run `python validate.py` before sharing changes to ensure required files remain in place.
 - Keep new challenge files under `challenges/<difficulty>/` with clear statements, examples, and hints.
 - Update documentation when adding or modifying challenge content.
 
