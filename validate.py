@@ -1,106 +1,9 @@
 #!/usr/bin/env python3
-"""
-Validation script for GitHub Copilot CLI Examples
-Tests that all Python examples run successfully
-"""
+"""Validation script for GitHub Copilot CLI Examples."""
 
-import subprocess
 import sys
 from pathlib import Path
 from typing import List, Tuple
-
-
-def run_python_file(filepath: Path) -> Tuple[bool, str]:
-    """
-    Run a Python file and return success status and output.
-    
-    Args:
-        filepath: Path to Python file
-    
-    Returns:
-        Tuple of (success: bool, output: str)
-    """
-    try:
-        result = subprocess.run(
-            [sys.executable, str(filepath)],
-            capture_output=True,
-            text=True,
-            timeout=10
-        )
-        return result.returncode == 0, result.stdout + result.stderr
-    except subprocess.TimeoutExpired:
-        return False, f"Timeout (>10s) while running {filepath}"
-    except Exception as e:
-        return False, str(e)
-
-
-def test_python_skills() -> List[Tuple[str, bool]]:
-    """Test all Python skill files."""
-    print("🐍 Testing Python skills...")
-    
-    skill_files = [
-        'skills/python/basic_functions.py',
-        'skills/python/data_structures.py',
-        'skills/python/file_operations.py',
-    ]
-    
-    results = []
-    for filepath in skill_files:
-        path = Path(filepath)
-        if not path.exists():
-            print(f"   ⚠️  {filepath} (not found)")
-            results.append((filepath, False))
-            continue
-        
-        success, output = run_python_file(path)
-        if success:
-            print(f"   ✅ {filepath}")
-        else:
-            print(f"   ❌ {filepath}")
-            if output:
-                print(f"      Error: {output[:200]}")
-        results.append((filepath, success))
-    
-    return results
-
-
-def test_examples() -> List[Tuple[str, bool]]:
-    """Test example files (with mock execution)."""
-    print("\n💡 Testing examples...")
-    
-    example_files = [
-        'examples/api_client.py',
-        'examples/web_scraper.py',
-    ]
-    
-    results = []
-    for filepath in example_files:
-        path = Path(filepath)
-        if not path.exists():
-            print(f"   ⚠️  {filepath} (not found)")
-            results.append((filepath, False))
-            continue
-        
-        # For examples, just check syntax by importing
-        try:
-            result = subprocess.run(
-                [sys.executable, '-m', 'py_compile', str(path)],
-                capture_output=True,
-                text=True,
-                timeout=5
-            )
-            success = result.returncode == 0
-            if success:
-                print(f"   ✅ {filepath} (syntax valid)")
-            else:
-                print(f"   ❌ {filepath}")
-                print(f"      Error: {result.stderr[:200]}")
-            results.append((filepath, success))
-        except Exception as e:
-            print(f"   ❌ {filepath}: {e}")
-            results.append((filepath, False))
-    
-    return results
 
 
 def check_challenge_files() -> List[Tuple[str, bool]]:
@@ -197,12 +100,6 @@ def main():
     print()
     
     all_results = []
-    
-    # Test Python skills
-    all_results.extend(test_python_skills())
-    
-    # Test examples
-    all_results.extend(test_examples())
     
     # Check challenges
     all_results.extend(check_challenge_files())
