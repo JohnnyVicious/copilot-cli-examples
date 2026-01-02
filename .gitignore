@@ -208,3 +208,7 @@ __marimo__/
 
 # WSL
 **/*.Zone.Identifier
+# Go build artifacts
+root/
+go.mod
+go.sum
