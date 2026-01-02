@@ -10,10 +10,10 @@ from pathlib import Path
 
 
 def check_python_version():
-    """Check if Python version is 3.8 or higher."""
+    """Check if Python version is 3.11 or higher."""
     version = sys.version_info
-    if version.major < 3 or (version.major == 3 and version.minor < 8):
-        print("❌ Python 3.8 or higher is required")
+    if version.major < 3 or (version.major == 3 and version.minor < 11):
+        print("❌ Python 3.11 or higher is required")
         print(f"   Current version: {version.major}.{version.minor}.{version.micro}")
         return False
     print(f"✅ Python version: {version.major}.{version.minor}.{version.micro}")

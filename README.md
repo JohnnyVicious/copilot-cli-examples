@@ -41,7 +41,7 @@ python setup.py
 ```
 
 The `setup.py` script will:
-- Check Python version (3.8+ required)
+- Check Python version (3.11+ required)
 - Install Python dependencies (requests, beautifulsoup4)
 - Verify repository structure
 - Check for optional Node.js and Go installations
