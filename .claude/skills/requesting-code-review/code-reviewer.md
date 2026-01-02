@@ -33,7 +33,7 @@ git diff {BASE_SHA}..{HEAD_SHA}
 - Clean separation of concerns?
 - Proper error handling?
 - Type safety (if applicable)?
-- DRY principle followed?
+- DRY principle followed (no code duplication)?
 - Edge cases handled?
 
 **Architecture:**
