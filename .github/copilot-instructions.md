@@ -5,3 +5,4 @@
 - Keep each scoped change in its own commit.
 - When a PR is merged, switch back to `main` and `git pull` to sync before further work.
 - When on `main` and making changes, create a new branch for the work (branch protection requires PRs).
+- Write clear, concise PR descriptions summarizing changes and tests.
