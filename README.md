@@ -34,8 +34,13 @@ copilot-cli-examples/
 - **Documentation**:
   - `docs/GETTING_STARTED.md` — onboarding and Copilot CLI tips
   - `docs/BEST_PRACTICES.md` — conventions, testing strategies, and security notes
-- **Skills**:
-  - `.claude/skills/` — reusable prompting skills (brainstorming, parallel dispatching, subagent-driven development, worktrees, writing skills, requesting code review)
+- **Skills** (`.claude/skills/`):
+  - **brainstorming** — clarify requirements and design before coding
+  - **dispatching-parallel-agents** — split independent tasks across agents
+  - **subagent-driven-development** — plan and execute work in reviewable tasks
+  - **using-git-worktrees** — isolate work in separate worktrees safely
+  - **writing-skills** — structured prompting patterns and examples
+  - **requesting-code-review** — invoke the `code-reviewer` agent_type with the provided template
 
 ## 🤖 Using Copilot CLI Here
 
