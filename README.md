@@ -17,6 +17,8 @@ copilot-cli-examples/
 │   ├── easy/
 │   ├── medium/
 │   └── hard/
+├── .claude/
+│   └── skills/
 ├── docs/
 │   ├── BEST_PRACTICES.md
 │   └── GETTING_STARTED.md
@@ -41,13 +43,14 @@ copilot-cli-examples/
   - **using-git-worktrees** — isolate work in separate worktrees safely
   - **writing-skills** — structured prompting patterns and examples
   - **requesting-code-review** — invoke the `code-reviewer` agent_type with the provided template
+  - **github-copilot** — connect to Copilot models and tooling
+  - **rust-developer** — Rust-focused prompts and guardrails
 
 ## 🤖 Using Copilot CLI Here
 
 - Open a challenge markdown file and ask Copilot to explain the problem, outline approaches, or draft test cases.
 - Iterate on your solution while requesting refactors, complexity analysis, or alternative strategies.
 - Use the best practices doc as a checklist for prompting and review.
-- For built-in skills (brainstorming, parallel dispatching, subagent-driven development, worktrees, writing skills, and requesting code review) see `.claude/skills/`; the code review skill uses agent_type `code-reviewer` with the template at `requesting-code-review/code-reviewer.md`.
 
 ## 🛠️ Development
 
