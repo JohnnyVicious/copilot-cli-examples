@@ -5,7 +5,6 @@ This example demonstrates how to build a simple REST API client using Python.
 
 import requests
 from typing import Dict, List, Optional
-import json
 
 
 class APIClient:

@@ -49,6 +49,8 @@ class Queue:
         """Remove and return front item from queue."""
         if self.is_empty():
             raise IndexError("Queue is empty")
+        # Note: pop(0) has O(n) time complexity. For O(1) dequeue,
+        # use collections.deque with popleft() in production code.
         return self.items.pop(0)
     
     def front(self):

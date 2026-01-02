@@ -29,7 +29,7 @@ def run_python_file(filepath: Path) -> Tuple[bool, str]:
         )
         return result.returncode == 0, result.stdout + result.stderr
     except subprocess.TimeoutExpired:
-        return False, "Timeout (>10s)"
+        return False, f"Timeout (>10s) while running {filepath}"
     except Exception as e:
         return False, str(e)
 
@@ -41,6 +41,7 @@ def test_python_skills() -> List[Tuple[str, bool]]:
     skill_files = [
         'skills/python/basic_functions.py',
         'skills/python/data_structures.py',
+        'skills/python/file_operations.py',
     ]
     
     results = []

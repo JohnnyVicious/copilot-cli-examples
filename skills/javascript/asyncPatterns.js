@@ -71,6 +71,9 @@ async function withTimeout(promise, timeoutMs) {
 
 /**
  * Process items in batches
+ * Note: This processes items within each batch in parallel (using Promise.all),
+ * but processes batches sequentially (using await in loop). This is useful for
+ * rate limiting or when you need to control concurrent operations.
  */
 async function processBatches(items, batchSize, processor) {
     const results = [];

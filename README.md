@@ -33,6 +33,30 @@ copilot-cli-examples/
 
 ## 🚀 Quick Start
 
+### Setup and Validation
+
+**Automated Setup (Recommended):**
+```bash
+python setup.py
+```
+
+The `setup.py` script will:
+- Check Python version (3.8+ required)
+- Install Python dependencies (requests, beautifulsoup4)
+- Verify repository structure
+- Check for optional Node.js and Go installations
+
+**Validate Everything Works:**
+```bash
+python validate.py
+```
+
+The `validate.py` script will:
+- Test all Python skill examples
+- Validate syntax of example applications
+- Check all challenge files exist
+- Verify documentation is complete
+
 ### Prerequisites
 
 **Python examples:**

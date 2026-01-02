@@ -51,6 +51,7 @@ def check_nodejs():
             print(f"✅ Node.js version: {result.stdout.strip()}")
             return True
     except FileNotFoundError:
+        # Node.js not installed, which is acceptable since it's optional
         pass
     
     print("⚠️  Node.js not found (optional, needed for JavaScript examples)")
@@ -70,6 +71,7 @@ def check_go():
             print(f"✅ Go version: {version}")
             return True
     except FileNotFoundError:
+        # Go not installed, which is acceptable since it's optional
         pass
     
     print("⚠️  Go not found (optional, needed for Go examples)")

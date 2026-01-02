@@ -74,7 +74,10 @@ func Factorial(n int) (int, error) {
 	if n == 0 || n == 1 {
 		return 1, nil
 	}
-	result, _ := Factorial(n - 1)
+	result, err := Factorial(n - 1)
+	if err != nil {
+		return 0, err
+	}
 	return n * result, nil
 }
 
