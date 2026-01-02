@@ -116,14 +116,22 @@ func main() {
 	fmt.Println(Greet("World"))
 	fmt.Printf("Sum: %d\n", CalculateSum([]int{1, 2, 3, 4, 5}))
 	
-	max, _ := FindMax([]int{1, 5, 3, 9, 2})
+	max, err := FindMax([]int{1, 5, 3, 9, 2})
+	if err != nil {
+		fmt.Printf("Error finding max: %v\n", err)
+		return
+	}
 	fmt.Printf("Max: %d\n", max)
 	
 	fmt.Printf("Reversed: %s\n", ReverseString("Hello"))
 	fmt.Printf("Is palindrome: %t\n", IsPalindrome("racecar"))
 	fmt.Printf("Fibonacci: %v\n", Fibonacci(10))
 	
-	fact, _ := Factorial(5)
+	fact, err := Factorial(5)
+	if err != nil {
+		fmt.Printf("Error calculating factorial: %v\n", err)
+		return
+	}
 	fmt.Printf("Factorial: %d\n", fact)
 	
 	fmt.Printf("Even numbers: %v\n", FilterEven([]int{1, 2, 3, 4, 5, 6}))
