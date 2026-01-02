@@ -60,6 +60,7 @@ Suggestions and contributions are welcome:
 
 - [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
 - [GitHub Copilot CLI](https://github.com/github/copilot-cli)
+- [Awesome GitHub Copilot](https://github.com/github/awesome-copilot) — community-curated custom agents, prompts, instructions, and skills to enhance Copilot.
 
 ## 📄 License
 
