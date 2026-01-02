@@ -1,12 +1,13 @@
 # GitHub Copilot CLI Examples
 
-A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curated coding challenges and accompanying documentation.
+A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curated coding challenges and accompanying documentation, especially for teams on GitHub Copilot Business who do not have Codex CLI access.
 
 ## 🎯 Purpose
 
 - Demonstrate Copilot CLI workflows end to end
 - Provide ready-to-use challenges for practicing algorithmic problem solving
 - Offer guidance on setup and best practices when working with Copilot
+- Show how Copilot CLI alone can deliver productive, high-quality results without Codex CLI access
 
 ## 📂 Repository Structure
 
@@ -16,20 +17,18 @@ copilot-cli-examples/
 │   ├── easy/
 │   ├── medium/
 │   └── hard/
+├── .claude/
+│   └── skills/
 ├── docs/
 │   ├── BEST_PRACTICES.md
 │   └── GETTING_STARTED.md
-├── setup.py
-├── validate.py
 └── README.md
 ```
 
 ## 🚀 Quick Start
 
-1. **Setup**: `python setup.py` (checks Python version and repository layout)
-2. **Validate**: `python validate.py` (verifies challenges and documentation exist)
-3. **Read**: `docs/GETTING_STARTED.md` for workflow guidance
-4. **Practice**: Open any file in `challenges/` and work through the prompts with Copilot
+1. **Read**: `docs/GETTING_STARTED.md` for workflow guidance
+2. **Practice**: Open any file in `challenges/` and work through the prompts with Copilot
 
 ## 📖 What's Included
 
@@ -37,9 +36,15 @@ copilot-cli-examples/
 - **Documentation**:
   - `docs/GETTING_STARTED.md` — onboarding and Copilot CLI tips
   - `docs/BEST_PRACTICES.md` — conventions, testing strategies, and security notes
-- **Utilities**:
-  - `setup.py` — environment/version checks
-  - `validate.py` — quick integrity verification for docs and challenge files
+- **Skills** (`.claude/skills/`):
+  - **brainstorming** — clarify requirements and design before coding
+  - **dispatching-parallel-agents** — split independent tasks across agents
+  - **subagent-driven-development** — plan and execute work in reviewable tasks
+  - **using-git-worktrees** — isolate work in separate worktrees safely
+  - **writing-skills** — structured prompting patterns and examples
+  - **requesting-code-review** — invoke the `code-reviewer` agent_type with the provided template
+  - **github-copilot** — connect to Copilot models and tooling
+  - **rust-developer** — Rust-focused prompts and guardrails
 
 ## 🤖 Using Copilot CLI Here
 
@@ -49,7 +54,6 @@ copilot-cli-examples/
 
 ## 🛠️ Development
 
-- Run `python validate.py` before sharing changes to ensure required files remain in place.
 - Keep new challenge files under `challenges/<difficulty>/` with clear statements, examples, and hints.
 - Update documentation when adding or modifying challenge content.
 
@@ -64,6 +68,8 @@ Suggestions and contributions are welcome:
 
 - [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
 - [GitHub Copilot CLI](https://github.com/github/copilot-cli)
+- [Awesome GitHub Copilot](https://github.com/github/awesome-copilot) — community-curated custom agents, prompts, instructions, and skills to enhance Copilot.
+- [Superpowers](https://github.com/obra/superpowers) — composable skills and instructions powering subagent-driven development workflows.
 
 ## 📄 License
 

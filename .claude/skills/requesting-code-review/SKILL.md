@@ -5,7 +5,7 @@ description: Use when completing tasks, implementing major features, or before m
 
 # Requesting Code Review
 
-Dispatch superpowers:code-reviewer subagent to catch issues before they cascade.
+Dispatch code-reviewer subagent to catch issues before they cascade.
 
 **Core principle:** Review early, review often.
 
@@ -31,11 +31,11 @@ HEAD_SHA=$(git rev-parse HEAD)
 
 **2. Dispatch code-reviewer subagent:**
 
-Use the Task tool to create a new task with `superpowers:code-reviewer` as the type, using the template at `requesting-code-review/code-reviewer.md`, and fill in all placeholders before dispatching.
+Use the Task tool with agent_type `code-reviewer` and template `requesting-code-review/code-reviewer.md`, and fill in all placeholders before dispatching.
 
 **Placeholders:**
 - `{WHAT_WAS_IMPLEMENTED}` - What you just built
-- `{PLAN_OR_REQUIREMENTS}` - What it should do
+- `{PLAN_REFERENCE}` - What it should do
 - `{BASE_SHA}` - Starting commit
 - `{HEAD_SHA}` - Ending commit
 - `{DESCRIPTION}` - Brief summary
@@ -56,11 +56,11 @@ You: Let me request code review before proceeding.
 BASE_SHA=$(git log --oneline | grep "Task 1" | head -1 | awk '{print $1}')
 HEAD_SHA=$(git rev-parse HEAD)
 
-[Task tool request: superpowers:code-reviewer]
-  type: superpowers:code-reviewer
+[Task tool request: code-reviewer]
+  type: code-reviewer
   template: requesting-code-review/code-reviewer.md
   WHAT_WAS_IMPLEMENTED: Verification and repair functions for conversation index
-  PLAN_OR_REQUIREMENTS: Task 2 from docs/plans/deployment-plan.md
+  PLAN_REFERENCE: Task 2 from docs/plans/deployment-plan.md
   BASE_SHA: a7981ec
   HEAD_SHA: 3df7661
   DESCRIPTION: Added verifyIndex() and repairIndex() with 4 issue types
