@@ -41,9 +41,6 @@ def process_user_data(users):
     pass
 ```
 
-### 4. Keep PRs Accurate
-- After every commit, review and update the PR description (and title if needed) so it matches the latest changes.
-
 ## Code Organization
 
 ### File Structure
