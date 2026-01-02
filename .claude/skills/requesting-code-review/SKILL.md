@@ -31,7 +31,7 @@ HEAD_SHA=$(git rev-parse HEAD)
 
 **2. Dispatch code-reviewer subagent:**
 
-Use Task tool with superpowers:code-reviewer type, fill template at `code-reviewer.md`
+Use the Task tool to create a new task with `superpowers:code-reviewer` as the type, using the template at `requesting-code-review/code-reviewer.md`, and fill in all placeholders before dispatching.
 
 **Placeholders:**
 - `{WHAT_WAS_IMPLEMENTED}` - What you just built
