@@ -83,13 +83,24 @@ fn is_valid_parentheses(s: &str) -> bool {
     false
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_is_valid_parentheses() {
+        assert!(is_valid_parentheses("()"));
+        assert!(is_valid_parentheses("()[]{}"));
+        assert!(!is_valid_parentheses("(]"));
+        assert!(!is_valid_parentheses("([)]"));
+        assert!(is_valid_parentheses("{[]}"));
+    }
+}
+
 fn main() {
-    assert!(is_valid_parentheses("()"));
-    assert!(is_valid_parentheses("()[]{}"));
-    assert!(!is_valid_parentheses("(]"));
-    assert!(!is_valid_parentheses("([)]"));
-    assert!(is_valid_parentheses("{[]}"));
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 
