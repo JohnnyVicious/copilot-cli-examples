@@ -1,0 +1,29 @@
+name: Rust Tests
+
+on:
+  push:
+    paths:
+      - "tests/rust/**"
+      - "results/rust/**"
+  pull_request:
+    paths:
+      - "tests/rust/**"
+      - "results/rust/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+      - name: Run cargo test
+        run: |
+          if [ -f Cargo.toml ]; then
+            cargo test --all --locked --all-targets
+          else
+            echo "No Cargo.toml found; skipping cargo test"
+          fi

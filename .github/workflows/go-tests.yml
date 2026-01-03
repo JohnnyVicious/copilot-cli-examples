@@ -1,0 +1,32 @@
+name: Go Tests
+
+on:
+  push:
+    paths:
+      - "tests/go/**"
+      - "results/go/**"
+  pull_request:
+    paths:
+      - "tests/go/**"
+      - "results/go/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+          cache: true
+      - name: Run go test
+        run: |
+          if [ -f go.mod ]; then
+            go test ./...
+          else
+            echo "No go.mod found; skipping go test"
+          fi
