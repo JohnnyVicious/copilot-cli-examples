@@ -1,6 +1,18 @@
 # GitHub Copilot CLI Examples
 
-A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curated coding challenges and accompanying documentation, especially for teams on GitHub Copilot Business who do not have Codex CLI access.
+A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curated coding challenges and accompanying documentation, especially for teams on GitHub Copilot Business who do not have Codex CLI access. See the [CLI Coding Tools Comparison](cli-coding-tools-comparison.md) for a full breakdown; the quick summary below highlights the most important differences.
+
+## 🧭 Quick CLI Comparison
+
+| Feature | Claude Code | OpenAI Codex CLI | GitHub Copilot CLI |
+|---------|-------------|------------------|-------------------|
+| **Release / Source** | GA, closed | GA, open source (Rust) | Public Preview, closed |
+| **Models** | Claude Sonnet/Opus/Haiku | GPT-5.2-Codex family | Multi-vendor (Claude, GPT, Gemini) |
+| **Context** | Instant auto-compaction + manual | Native compaction + manual | Auto-compaction at 95% + manual |
+| **GitHub Integration** | Via `gh`/MCP | Native GitHub support | Deep native GitHub (Issues/PRs) |
+| **MCP** | Client + server | Client-only | Client + GitHub MCP server |
+| **Subagents / Delegation** | Background tasks | Cloud agent delegation | Built-in subagents + `/delegate` |
+| **Best Fit** | Strong MCP ecosystem, local-first | Cloud agent + Windows support | GitHub-first teams, multi-model |
 
 ## 🎯 Purpose
 
