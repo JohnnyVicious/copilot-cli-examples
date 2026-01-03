@@ -7,11 +7,15 @@ on:
       - "tests/go/**"
       - "results/go/**"
       - ".github/workflows/go-tests.yml"
+      - "!tests/go/**/*.md"
+      - "!results/go/**/*.md"
   pull_request:
     paths:
       - "tests/go/**"
       - "results/go/**"
       - ".github/workflows/go-tests.yml"
+      - "!tests/go/**/*.md"
+      - "!results/go/**/*.md"
 
 jobs:
   test:
@@ -26,7 +30,9 @@ jobs:
         with:
           go-version: "1.22"
           cache: true
+          cache-dependency-path: tests/go/go.sum
       - name: Run go test
+        working-directory: tests/go
         run: |
           if [ -f go.mod ]; then
             go test ./...
