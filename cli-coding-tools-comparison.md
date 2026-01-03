@@ -9,9 +9,9 @@ This comparison covers the three major AI-powered CLI coding agents based on the
 | Feature | Claude Code | OpenAI Codex CLI | GitHub Copilot CLI |
 |---------|-------------|------------------|-------------------|
 | **Developer** | Anthropic | OpenAI | GitHub/Microsoft |
-| **Release Status** | GA (v2.0+) | GA | Public Preview (v0.0.374) |
+| **Release Status** | GA — latest v2.0.74 | Stable v0.77.0 (0.78.0-alpha pre-releases) | Public Preview — latest v0.0.374 |
 | **Open Source** | ❌ No (closed source) | ✅ Yes (Apache-2.0) | ❌ No (closed source) |
-| **Default Model** | Claude Sonnet 4 / Opus 4.5 | GPT-5.2-Codex | Claude Sonnet 4.5 |
+| **Default Model** | Claude Sonnet 4 / Opus 4.5 | GPT-5.x-Codex (configurable) | Claude Sonnet 4.5 |
 | **Primary Language** | TypeScript/Node.js | Rust | TypeScript/Node.js |
 | **GitHub Releases** | [anthropics/claude-code](https://github.com/anthropics/claude-code/releases) | [openai/codex](https://github.com/openai/codex/releases) | [github/copilot-cli](https://github.com/github/copilot-cli/releases) |
 
@@ -148,37 +148,26 @@ This comparison covers the three major AI-powered CLI coding agents based on the
 
 ## Latest Notable Features (Dec 2025)
 
-### Claude Code (v2.0.x)
-- LSP (Language Server Protocol) integration for code intelligence
-- Instant context compaction
-- Stats screenshots with improved resolution
-- Plugin marketplace with search filtering
-- Background commands (Ctrl-b)
-- `.claude/rules/` directory support
+### Claude Code (v2.0.74 / v2.0.73)
+- Added LSP tool for go-to-definition, references, and hover docs (v2.0.74)
+- `/terminal-setup` support for Kitty, Alacritty, Zed, Warp; ctrl+t toggle for syntax highlighting; theme picker improvements
+- Search filtering in plugin discover; clickable image links; session forking with custom session IDs
+- Fixes across skills allowed-tools handling, Opus 4.5 tip display, input history, and keyboard shortcut labeling
 
-### OpenAI Codex CLI (v0.77.x)
-- GPT-5.2-Codex with native compaction
-- Agent Skills system
-- Improved Windows environment support
-- Enhanced cybersecurity capabilities
-- Linear and Slack integrations
-- IDE extension with cloud task sync
+### OpenAI Codex CLI (v0.77.0 with 0.78.0-alpha series)
+- TUI scroll normalization and new `tui.scroll_*` config settings
+- `allowed_sandbox_modes` in `requirements.toml` to constrain sandbox modes
+- MCP OAuth login no longer needs `rmcp_client` feature flag; improved fuzzy file search; updated bundled model metadata
+- Ongoing 0.78.0-alpha pre-releases (rust-v0.78.0-alpha.2–10) focus on performance and interoperability
 
 ### GitHub Copilot CLI (v0.0.374 - Jan 2, 2026)
 - **Auto-compaction at 95% token limit and `/compact` command** ⭐ NEW
 - **Built-in subagents** for exploring and managing tasks ⭐ NEW
 - **Built-in `web_fetch` tool** for fetching web content ⭐ NEW
-- Model picker improvements with settings link for unavailable models
-- MCP server type help text corrections
+- Model picker improvements with settings link for unavailable models; MCP server type help text corrections
 - Tab completion for path arguments in `/cwd` and `/add-dir` (v0.0.373)
-- Copilot Spaces tools enabled in GitHub MCP Server (v0.0.373)
-- `/context` command for token usage visualization (v0.0.372)
-- `--resume` flag to continue remote sessions locally (v0.0.372)
+- `/context` command for token usage visualization and `--resume` for remote sessions (v0.0.372)
 - URL permission controls for web-accessing commands (v0.0.372)
-- Agent Skills support (Dec 18) - compatible with Claude Code `.claude/skills`
-- GPT-5.1-Codex-Max model availability (v0.0.367)
-- `/delegate` for cloud agent handoff
-- Custom agents with `infer` property for tool visibility
 
 ## Summary Recommendations
 
