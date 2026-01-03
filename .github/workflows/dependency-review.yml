@@ -4,6 +4,10 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - '.github/dependabot.yml'
+      - '.github/workflows/dependency-review.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read

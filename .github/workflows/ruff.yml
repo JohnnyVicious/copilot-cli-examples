@@ -4,7 +4,14 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '**.py'
+      - '.github/workflows/ruff.yml'
   pull_request:
+    paths:
+      - '**.py'
+      - '.github/workflows/ruff.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
