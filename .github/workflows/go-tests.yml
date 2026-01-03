@@ -1,0 +1,38 @@
+name: Go Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Check for go.mod
+        id: check_gomod
+        run: |
+          if [ -f tests/go/go.mod ]; then
+            echo "go_module_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "go_module_exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Set up Go
+        if: steps.check_gomod.outputs.go_module_exists == 'true'
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: tests/go/go.mod
+          cache-dependency-path: tests/go/go.sum
+
+      - name: Run Go tests
+        if: steps.check_gomod.outputs.go_module_exists == 'true'
+        working-directory: tests/go
+        run: go test ./...
