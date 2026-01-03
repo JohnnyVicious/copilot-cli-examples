@@ -210,5 +210,5 @@ __marimo__/
 **/*.Zone.Identifier
 # Go build artifacts
 root/
-go.mod
-go.sum
+/go.mod
+/go.sum
