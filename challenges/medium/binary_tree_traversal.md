@@ -116,9 +116,20 @@ fn level_order_traversal(root: Option<Box<TreeNode>>) -> Vec<Vec<i32>> {
     Vec::new()
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_level_order_traversal() {
+        assert!(level_order_traversal(None).is_empty());
+    }
+}
+
 fn main() {
-    assert!(level_order_traversal(None).is_empty());
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 
