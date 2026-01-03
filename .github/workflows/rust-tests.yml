@@ -21,9 +21,10 @@ jobs:
       - name: Set up Rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - name: Run cargo test
+        working-directory: tests/rust
         run: |
           if [ -f Cargo.toml ]; then
-            cargo test --all --locked --all-targets
+            cargo test --all --all-targets
           else
             echo "No Cargo.toml found; skipping cargo test"
           fi
