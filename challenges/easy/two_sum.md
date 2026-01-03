@@ -91,19 +91,25 @@ function Get-TwoSum {
 
 # Test cases
 $result1 = Get-TwoSum -Nums @(2, 7, 11, 15) -Target 9
-if ($result1.Count -ne 2) { throw "Test failed: Expected array of length 2 but got $($result1.Count)" }
+if ($result1.Count -ne 2) { 
+    throw "Test failed: Expected array of length 2 but got $($result1.Count)" 
+}
 if (($result1[0] -ne 0) -or ($result1[1] -ne 1)) {
     throw "Test failed: Expected [0, 1] but got [$($result1 -join ', ')]"
 }
 
 $result2 = Get-TwoSum -Nums @(3, 2, 4) -Target 6
-if ($result2.Count -ne 2) { throw "Test failed: Expected array of length 2 but got $($result2.Count)" }
+if ($result2.Count -ne 2) { 
+    throw "Test failed: Expected array of length 2 but got $($result2.Count)" 
+}
 if (($result2[0] -ne 1) -or ($result2[1] -ne 2)) {
     throw "Test failed: Expected [1, 2] but got [$($result2 -join ', ')]"
 }
 
 $result3 = Get-TwoSum -Nums @(3, 3) -Target 6
-if ($result3.Count -ne 2) { throw "Test failed: Expected array of length 2 but got $($result3.Count)" }
+if ($result3.Count -ne 2) { 
+    throw "Test failed: Expected array of length 2 but got $($result3.Count)" 
+}
 if (($result3[0] -ne 0) -or ($result3[1] -ne 1)) {
     throw "Test failed: Expected [0, 1] but got [$($result3 -join ', ')]"
 }

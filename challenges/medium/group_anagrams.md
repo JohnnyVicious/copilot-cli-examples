@@ -112,14 +112,18 @@ if (($allWords -join ',') -ne ($expectedWords -join ',')) {
 }
 
 $result2 = Get-AnagramGroups -Words @("")
-if ($result2.Count -ne 1) { throw "Test failed: Expected 1 group but got $($result2.Count)" }
-if (($result2[0].Count -ne 1) -or ($result2[0][0] -ne "")) {
+if ($result2.Count -ne 1) { 
+    throw "Test failed: Expected 1 group but got $($result2.Count)" 
+}
+if (($null -eq $result2[0]) -or ($result2[0].Count -ne 1) -or ($result2[0][0] -ne "")) {
     throw "Test failed: Expected [['']] but got different result"
 }
 
 $result3 = Get-AnagramGroups -Words @("a")
-if ($result3.Count -ne 1) { throw "Test failed: Expected 1 group but got $($result3.Count)" }
-if (($result3[0].Count -ne 1) -or ($result3[0][0] -ne "a")) {
+if ($result3.Count -ne 1) { 
+    throw "Test failed: Expected 1 group but got $($result3.Count)" 
+}
+if (($null -eq $result3[0]) -or ($result3[0].Count -ne 1) -or ($result3[0][0] -ne "a")) {
     throw "Test failed: Expected [['a']] but got different result"
 }
 
