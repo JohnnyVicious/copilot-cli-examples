@@ -6,10 +6,12 @@ on:
     paths:
       - "tests/powershell/**"
       - "results/powershell/**"
+      - ".github/workflows/powershell-tests.yml"
   pull_request:
     paths:
       - "tests/powershell/**"
       - "results/powershell/**"
+      - ".github/workflows/powershell-tests.yml"
 
 jobs:
   test:

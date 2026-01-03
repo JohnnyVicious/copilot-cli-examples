@@ -6,10 +6,12 @@ on:
     paths:
       - "tests/python/**"
       - "results/python/**"
+      - ".github/workflows/python-tests.yml"
   pull_request:
     paths:
       - "tests/python/**"
       - "results/python/**"
+      - ".github/workflows/python-tests.yml"
 
 jobs:
   test:

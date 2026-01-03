@@ -6,10 +6,12 @@ on:
     paths:
       - "tests/rust/**"
       - "results/rust/**"
+      - ".github/workflows/rust-tests.yml"
   pull_request:
     paths:
       - "tests/rust/**"
       - "results/rust/**"
+      - ".github/workflows/rust-tests.yml"
 
 jobs:
   test:
