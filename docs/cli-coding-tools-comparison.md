@@ -134,7 +134,7 @@ This comparison covers the three major AI-powered CLI coding agents based on the
 |---------|-------------|------------------|-------------------|
 | **macOS** | ✅ Full support | ✅ Full support | ✅ Full support |
 | **Linux** | ✅ Full support (incl. Alpine) | ✅ Full support | ✅ Full support |
-| **Windows** | ✅ Native + WSL | ✅ Native (improved in 5.2) | ✅ WSL only |
+| **Windows** | ✅ Native + WSL | ✅ Native (improved in 5.2) | ✅ Native + WSL |
 | **IDE Extension** | ✅ VS Code extension | ✅ VS Code/Cursor extension | ⚠️ Planned |
 
 ## Pricing & Access
