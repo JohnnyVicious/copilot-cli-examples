@@ -5,16 +5,14 @@ on:
     paths:
       - "tests/go/**"
       - "results/go/**"
-    paths-ignore:
-      - "tests/go/**/*.md"
-      - "results/go/**/*.md"
+      - "!tests/go/**/*.md"
+      - "!results/go/**/*.md"
   pull_request:
     paths:
       - "tests/go/**"
       - "results/go/**"
-    paths-ignore:
-      - "tests/go/**/*.md"
-      - "results/go/**/*.md"
+      - "!tests/go/**/*.md"
+      - "!results/go/**/*.md"
 
 jobs:
   test:

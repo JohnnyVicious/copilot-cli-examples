@@ -5,16 +5,14 @@ on:
     paths:
       - "tests/python/**"
       - "results/python/**"
-    paths-ignore:
-      - "tests/python/**/*.md"
-      - "results/python/**/*.md"
+      - "!tests/python/**/*.md"
+      - "!results/python/**/*.md"
   pull_request:
     paths:
       - "tests/python/**"
       - "results/python/**"
-    paths-ignore:
-      - "tests/python/**/*.md"
-      - "results/python/**/*.md"
+      - "!tests/python/**/*.md"
+      - "!results/python/**/*.md"
 
 jobs:
   test:
