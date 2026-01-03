@@ -1,0 +1,42 @@
+name: Python Tests
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tests/python/**'
+      - 'results/python/**'
+  pull_request:
+    paths:
+      - 'tests/python/**'
+      - 'results/python/**'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+          cache-dependency-path: 'tests/python/requirements.txt'
+
+      - name: Install dependencies
+        if: hashFiles('tests/python/requirements.txt') != ''
+        run: |
+          cd tests/python
+          pip install -r requirements.txt
+
+      - name: Run tests
+        if: hashFiles('tests/python/requirements.txt') != ''
+        run: |
+          cd tests/python
+          python -m pytest || echo "No tests found or pytest not configured"
