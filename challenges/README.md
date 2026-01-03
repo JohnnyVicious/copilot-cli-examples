@@ -17,7 +17,7 @@ Each challenge includes:
 - **Problem Description** - Clear explanation of the task
 - **Examples** - Input/output examples with explanations
 - **Constraints** - Limitations and edge cases
-- **Solution Template** - Code skeleton with test cases
+- **Solution Templates** - Code skeletons with test cases for Python 3.11+, Go, Rust, and PowerShell Core
 - **Hints** - Guidance without spoiling the solution
 - **Approach** - Detailed solution strategy
 - **Complexity Analysis** - Time and space complexity
@@ -104,7 +104,7 @@ cat challenges/easy/two_sum.md
 Study the provided examples to understand input/output format and edge cases.
 
 ### Step 3: Implement Solution
-Copy the solution template and implement your solution:
+Choose your preferred language (Python 3.11+, Go, Rust, or PowerShell Core), copy the matching solution template, and implement your solution:
 
 ```python
 def two_sum(nums: list[int], target: int) -> list[int]:

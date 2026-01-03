@@ -34,7 +34,7 @@ Explanation: The endWord "cog" is not in wordList, therefore there is no valid t
 - beginWord != endWord
 - All the words in wordList are unique
 
-## Solution Template (Python)
+## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
 
 ```python
 from typing import List
@@ -42,27 +42,63 @@ from collections import deque
 
 
 def ladder_length(beginWord: str, endWord: str, wordList: List[str]) -> int:
-    """
-    Find shortest transformation sequence length
-    
-    Args:
-        beginWord: Starting word
-        endWord: Target word
-        wordList: Dictionary of valid words
-    
-    Returns:
-        Length of shortest transformation sequence, or 0 if impossible
-    """
+    """Find shortest transformation sequence length."""
     # TODO: Implement your solution here
-    pass
+    return 0
 
 
-# Test cases
 if __name__ == "__main__":
     assert ladder_length("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]) == 5
     assert ladder_length("hit", "cog", ["hot", "dot", "dog", "lot", "log"]) == 0
     assert ladder_length("a", "c", ["a", "b", "c"]) == 2
     print("All tests passed!")
+```
+
+```go
+package main
+
+import "fmt"
+
+func ladderLength(beginWord string, endWord string, wordList []string) int {
+    // TODO: Implement your solution here
+    return 0
+}
+
+func main() {
+    fmt.Println(ladderLength("hit", "cog", []string{"hot", "dot", "dog", "lot", "log", "cog"}))
+}
+```
+
+```rust
+fn ladder_length(begin_word: &str, end_word: &str, word_list: Vec<String>) -> usize {
+    // TODO: Implement your solution here
+    0
+}
+
+fn main() {
+    let length = ladder_length(
+        "hit",
+        "cog",
+        ["hot", "dot", "dog", "lot", "log", "cog"]
+            .iter()
+            .map(|s| s.to_string())
+            .collect(),
+    );
+    println!("{length}");
+}
+```
+
+```powershell
+function Get-WordLadderLength {
+    param(
+        [string]$BeginWord,
+        [string]$EndWord,
+        [string[]]$WordList
+    )
+    # TODO: Implement your solution here
+}
+
+Get-WordLadderLength -BeginWord "hit" -EndWord "cog" -WordList @("hot","dot","dog","lot","log","cog")
 ```
 
 ## Hints

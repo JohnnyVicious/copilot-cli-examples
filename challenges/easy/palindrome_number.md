@@ -31,30 +31,63 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ## Constraints
 - -2^31 <= x <= 2^31 - 1
 
-## Solution Template (Python)
+## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
 
 ```python
 def is_palindrome(x: int) -> bool:
-    """
-    Check if an integer is a palindrome
-    
-    Args:
-        x: Integer to check
-    
-    Returns:
-        True if palindrome, False otherwise
-    """
+    """Check if an integer is a palindrome."""
     # TODO: Implement your solution here
-    pass
+    return False
 
 
-# Test cases
 if __name__ == "__main__":
-    assert is_palindrome(121) == True
-    assert is_palindrome(-121) == False
-    assert is_palindrome(10) == False
-    assert is_palindrome(0) == True
+    assert is_palindrome(121) is True
+    assert is_palindrome(-121) is False
+    assert is_palindrome(10) is False
+    assert is_palindrome(0) is True
     print("All tests passed!")
+```
+
+```go
+package main
+
+import "fmt"
+
+func isPalindrome(x int) bool {
+    // TODO: Implement your solution here
+    return false
+}
+
+func main() {
+    fmt.Println(isPalindrome(121))
+}
+```
+
+```rust
+fn is_palindrome(x: i32) -> bool {
+    // TODO: Implement your solution here
+    false
+}
+
+fn main() {
+    assert!(is_palindrome(121));
+    assert!(!is_palindrome(-121));
+    assert!(!is_palindrome(10));
+    assert!(is_palindrome(0));
+    println!("All tests passed!");
+}
+```
+
+```powershell
+function Test-PalindromeNumber {
+    param([int]$Number)
+    # TODO: Implement your solution here
+}
+
+Test-PalindromeNumber -Number 121
+Test-PalindromeNumber -Number -121
+Test-PalindromeNumber -Number 10
+Test-PalindromeNumber -Number 0
 ```
 
 ## Hints

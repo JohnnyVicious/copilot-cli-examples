@@ -17,7 +17,7 @@ A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curate
 ## 🎯 Purpose
 
 - Demonstrate Copilot CLI workflows end to end
-- Provide ready-to-use challenges for practicing algorithmic problem solving
+- Provide ready-to-use challenges for practicing algorithmic problem solving with solution templates in Python 3.11+, Go, Rust, and PowerShell Core
 - Offer guidance on setup and best practices when working with Copilot
 - Show how Copilot CLI alone can deliver productive, high-quality results without Codex CLI access
 

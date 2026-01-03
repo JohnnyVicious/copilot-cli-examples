@@ -35,34 +35,63 @@ Since the largest window of s only has one 'a', return empty string.
 - 1 <= m, n <= 10^5
 - s and t consist of uppercase and lowercase English letters
 
-## Solution Template (Python)
+## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
 
 ```python
 from collections import Counter, defaultdict
 
 
 def min_window(s: str, t: str) -> str:
-    """
-    Find minimum window substring containing all characters from t
-    
-    Args:
-        s: Source string
-        t: Target string with required characters
-    
-    Returns:
-        Minimum window substring, or empty string if none exists
-    """
+    """Find minimum window substring containing all characters from t."""
     # TODO: Implement your solution here
-    pass
+    return ""
 
 
-# Test cases
 if __name__ == "__main__":
     assert min_window("ADOBECODEBANC", "ABC") == "BANC"
     assert min_window("a", "a") == "a"
     assert min_window("a", "aa") == ""
     assert min_window("ab", "b") == "b"
     print("All tests passed!")
+```
+
+```go
+package main
+
+import "fmt"
+
+func minWindow(s string, t string) string {
+    // TODO: Implement your solution here
+    return ""
+}
+
+func main() {
+    fmt.Println(minWindow("ADOBECODEBANC", "ABC"))
+}
+```
+
+```rust
+fn min_window(s: &str, t: &str) -> String {
+    // TODO: Implement your solution here
+    String::new()
+}
+
+fn main() {
+    assert_eq!(min_window("ADOBECODEBANC", "ABC"), "BANC");
+    println!("All tests passed!");
+}
+```
+
+```powershell
+function Get-MinimumWindowSubstring {
+    param(
+        [string]$Source,
+        [string]$Target
+    )
+    # TODO: Implement your solution here
+}
+
+Get-MinimumWindowSubstring -Source "ADOBECODEBANC" -Target "ABC"
 ```
 
 ## Hints
