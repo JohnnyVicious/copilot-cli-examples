@@ -1,6 +1,6 @@
 # GitHub Copilot CLI Examples
 
-A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curated coding challenges and accompanying documentation, especially for teams on GitHub Copilot Business who do not have Codex CLI access. See the [CLI Coding Tools Comparison](cli-coding-tools-comparison.md) for a full breakdown; the quick summary below highlights the most important differences.
+A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curated coding challenges and accompanying documentation, especially for teams on GitHub Copilot Business who do not have Codex CLI access. See the [CLI Coding Tools Comparison](docs/cli-coding-tools-comparison.md) for a full breakdown; the quick summary below highlights the most important differences.
 
 ## 🧭 Quick CLI Comparison
 
