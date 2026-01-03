@@ -70,13 +70,24 @@ fn length_of_longest_substring(s: &str) -> usize {
     0
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_length_of_longest_substring() {
+        assert_eq!(length_of_longest_substring("abcabcbb"), 3);
+        assert_eq!(length_of_longest_substring("bbbbb"), 1);
+        assert_eq!(length_of_longest_substring("pwwkew"), 3);
+        assert_eq!(length_of_longest_substring(""), 0);
+        assert_eq!(length_of_longest_substring("dvdf"), 3);
+    }
+}
+
 fn main() {
-    assert_eq!(length_of_longest_substring("abcabcbb"), 3);
-    assert_eq!(length_of_longest_substring("bbbbb"), 1);
-    assert_eq!(length_of_longest_substring("pwwkew"), 3);
-    assert_eq!(length_of_longest_substring(""), 0);
-    assert_eq!(length_of_longest_substring("dvdf"), 3);
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 

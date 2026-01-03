@@ -71,11 +71,22 @@ fn two_sum(nums: &[i32], target: i32) -> Option<(usize, usize)> {
     None
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_two_sum() {
+        assert_eq!(two_sum(&[2, 7, 11, 15], 9), Some((0, 1)));
+        assert_eq!(two_sum(&[3, 2, 4], 6), Some((1, 2)));
+        assert_eq!(two_sum(&[3, 3], 6), Some((0, 1)));
+    }
+}
+
 fn main() {
-    assert_eq!(two_sum(&[2, 7, 11, 15], 9), Some((0, 1)));
-    assert_eq!(two_sum(&[3, 2, 4], 6), Some((1, 2)));
-    assert_eq!(two_sum(&[3, 3], 6), Some((0, 1)));
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 

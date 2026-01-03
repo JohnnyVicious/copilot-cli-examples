@@ -76,9 +76,20 @@ fn min_window(s: &str, t: &str) -> String {
     String::new()
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_min_window() {
+        assert_eq!(min_window("ADOBECODEBANC", "ABC"), "BANC");
+    }
+}
+
 fn main() {
-    assert_eq!(min_window("ADOBECODEBANC", "ABC"), "BANC");
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 
