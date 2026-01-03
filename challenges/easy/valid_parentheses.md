@@ -44,31 +44,66 @@ Output: true
 - 1 <= s.length <= 10^4
 - s consists of parentheses only '()[]{}'
 
-## Solution Template (Python)
+## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
 
 ```python
 def is_valid_parentheses(s: str) -> bool:
-    """
-    Check if string has valid parentheses
-    
-    Args:
-        s: String containing parentheses
-    
-    Returns:
-        True if valid, False otherwise
-    """
+    """Check if string has valid parentheses."""
     # TODO: Implement your solution here
-    pass
+    return False
 
 
-# Test cases
 if __name__ == "__main__":
-    assert is_valid_parentheses("()") == True
-    assert is_valid_parentheses("()[]{}") == True
-    assert is_valid_parentheses("(]") == False
-    assert is_valid_parentheses("([)]") == False
-    assert is_valid_parentheses("{[]}") == True
+    assert is_valid_parentheses("()") is True
+    assert is_valid_parentheses("()[]{}") is True
+    assert is_valid_parentheses("(]") is False
+    assert is_valid_parentheses("([)]") is False
+    assert is_valid_parentheses("{[]}") is True
     print("All tests passed!")
+```
+
+```go
+package main
+
+import "fmt"
+
+func isValidParentheses(s string) bool {
+    // TODO: Implement your solution here
+    return false
+}
+
+func main() {
+    fmt.Println(isValidParentheses("()"))
+}
+```
+
+```rust
+fn is_valid_parentheses(s: &str) -> bool {
+    // TODO: Implement your solution here
+    false
+}
+
+fn main() {
+    assert!(is_valid_parentheses("()"));
+    assert!(is_valid_parentheses("()[]{}"));
+    assert!(!is_valid_parentheses("(]"));
+    assert!(!is_valid_parentheses("([)]"));
+    assert!(is_valid_parentheses("{[]}"));
+    println!("All tests passed!");
+}
+```
+
+```powershell
+function Test-ValidParentheses {
+    param([string]$Input)
+    # TODO: Implement your solution here
+}
+
+Test-ValidParentheses -Input "()"
+Test-ValidParentheses -Input "()[]{}"
+Test-ValidParentheses -Input "(]"
+Test-ValidParentheses -Input "([)]"
+Test-ValidParentheses -Input "{[]}"
 ```
 
 ## Hints

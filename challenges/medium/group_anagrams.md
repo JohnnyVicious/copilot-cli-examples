@@ -30,42 +30,67 @@ Output: [["a"]]
 - 0 <= strs[i].length <= 100
 - strs[i] consists of lowercase English letters
 
-## Solution Template (Python)
+## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
 
 ```python
 from typing import List
-from collections import defaultdict
 
 
 def group_anagrams(strs: List[str]) -> List[List[str]]:
-    """
-    Group anagrams together
-    
-    Args:
-        strs: List of strings
-    
-    Returns:
-        List of lists, each containing anagram groups
-    """
+    """Group anagrams together."""
     # TODO: Implement your solution here
-    pass
+    return []
 
 
-# Test cases
 if __name__ == "__main__":
     result1 = group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
-    # Sort for comparison (order doesn't matter)
     result1_sorted = [sorted(group) for group in result1]
     expected1 = [sorted(group) for group in [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]]
     assert sorted(result1_sorted) == sorted(expected1)
-    
-    result2 = group_anagrams([""])
-    assert result2 == [[""]]
-    
-    result3 = group_anagrams(["a"])
-    assert result3 == [["a"]]
-    
+    assert group_anagrams([""]) == [[""]]
+    assert group_anagrams(["a"]) == [["a"]]
     print("All tests passed!")
+```
+
+```go
+package main
+
+import "fmt"
+
+func groupAnagrams(strs []string) [][]string {
+    // TODO: Implement your solution here
+    return [][]string{}
+}
+
+func main() {
+    fmt.Println(groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}))
+}
+```
+
+```rust
+fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
+    // TODO: Implement your solution here
+    Vec::new()
+}
+
+fn main() {
+    let result = group_anagrams(
+        ["eat", "tea", "tan", "ate", "nat", "bat"]
+            .iter()
+            .map(|s| s.to_string())
+            .collect(),
+    );
+    println!("{result:?}");
+}
+```
+
+```powershell
+function Get-AnagramGroups {
+    param([string[]]$Words)
+    # TODO: Implement your solution here
+}
+
+Get-AnagramGroups -Words @("eat","tea","tan","ate","nat","bat")
 ```
 
 ## Hints

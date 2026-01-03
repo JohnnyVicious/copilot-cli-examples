@@ -41,7 +41,7 @@ Output: []
 - lists[i] is sorted in ascending order
 - The sum of lists[i].length will not exceed 10^4
 
-## Solution Template (Python)
+## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
 
 ```python
 from typing import List, Optional
@@ -55,22 +55,13 @@ class ListNode:
 
 
 def merge_k_lists(lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-    """
-    Merge k sorted linked lists
-    
-    Args:
-        lists: List of k sorted linked list heads
-    
-    Returns:
-        Head of merged sorted linked list
-    """
+    """Merge k sorted linked lists."""
     # TODO: Implement your solution here
-    pass
+    return None
 
 
-# Helper functions for testing
 def list_to_linkedlist(arr: List[int]) -> Optional[ListNode]:
-    """Convert array to linked list"""
+    """Convert array to linked list."""
     if not arr:
         return None
     head = ListNode(arr[0])
@@ -82,7 +73,7 @@ def list_to_linkedlist(arr: List[int]) -> Optional[ListNode]:
 
 
 def linkedlist_to_list(head: Optional[ListNode]) -> List[int]:
-    """Convert linked list to array"""
+    """Convert linked list to array."""
     result = []
     current = head
     while current:
@@ -91,25 +82,80 @@ def linkedlist_to_list(head: Optional[ListNode]) -> List[int]:
     return result
 
 
-# Test cases
 if __name__ == "__main__":
     lists1 = [
         list_to_linkedlist([1, 4, 5]),
         list_to_linkedlist([1, 3, 4]),
-        list_to_linkedlist([2, 6])
+        list_to_linkedlist([2, 6]),
     ]
     result1 = merge_k_lists(lists1)
     assert linkedlist_to_list(result1) == [1, 1, 2, 3, 4, 4, 5, 6]
-    
-    lists2 = []
+
+    lists2: List[Optional[ListNode]] = []
     result2 = merge_k_lists(lists2)
     assert linkedlist_to_list(result2) == []
-    
+
     lists3 = [list_to_linkedlist([])]
     result3 = merge_k_lists(lists3)
     assert linkedlist_to_list(result3) == []
-    
+
     print("All tests passed!")
+```
+
+```go
+package main
+
+import "fmt"
+
+type ListNode struct {
+    Val  int
+    Next *ListNode
+}
+
+func mergeKLists(lists []*ListNode) *ListNode {
+    // TODO: Implement your solution here
+    return nil
+}
+
+func main() {
+    fmt.Println(mergeKLists(nil))
+}
+```
+
+```rust
+#[derive(PartialEq, Eq, Debug)]
+pub struct ListNode {
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
+}
+
+fn merge_k_lists(lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
+    // TODO: Implement your solution here
+    None
+}
+
+fn main() {
+    assert!(merge_k_lists(vec![]).is_none());
+    println!("All tests passed!");
+}
+```
+
+```powershell
+class ListNode {
+    [int]$Val
+    [ListNode]$Next
+    ListNode([int]$Val, [ListNode]$Next = $null) {
+        $this.Val = $Val
+        $this.Next = $Next
+    }
+}
+
+function Merge-KLists {
+    param([ListNode[]]$Lists)
+    # TODO: Implement your solution here
+}
+
+Merge-KLists -Lists @()
 ```
 
 ## Hints

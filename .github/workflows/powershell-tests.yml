@@ -1,0 +1,32 @@
+name: PowerShell Tests
+
+on:
+  push:
+    paths:
+      - "tests/powershell/**"
+      - "results/powershell/**"
+  pull_request:
+    paths:
+      - "tests/powershell/**"
+      - "results/powershell/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Pester tests
+        shell: pwsh
+        run: |
+          if (Test-Path "tests/powershell") {
+            if (-not (Get-Module -ListAvailable -Name Pester)) {
+              Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck
+            }
+            Invoke-Pester -Path "tests/powershell" -CI
+          }
+          else {
+            Write-Host "No PowerShell tests found in tests/powershell"
+          }

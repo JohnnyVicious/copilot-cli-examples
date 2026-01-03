@@ -31,24 +31,15 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 - 0 <= s.length <= 5 * 10^4
 - s consists of English letters, digits, symbols and spaces.
 
-## Solution Template (Python)
+## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
 
 ```python
 def length_of_longest_substring(s: str) -> int:
-    """
-    Find length of longest substring without repeating characters
-    
-    Args:
-        s: Input string
-    
-    Returns:
-        Length of longest substring without repeating characters
-    """
+    """Find length of longest substring without repeating characters."""
     # TODO: Implement your solution here
-    pass
+    return 0
 
 
-# Test cases
 if __name__ == "__main__":
     assert length_of_longest_substring("abcabcbb") == 3
     assert length_of_longest_substring("bbbbb") == 1
@@ -56,6 +47,50 @@ if __name__ == "__main__":
     assert length_of_longest_substring("") == 0
     assert length_of_longest_substring("dvdf") == 3
     print("All tests passed!")
+```
+
+```go
+package main
+
+import "fmt"
+
+func lengthOfLongestSubstring(s string) int {
+    // TODO: Implement your solution here
+    return 0
+}
+
+func main() {
+    fmt.Println(lengthOfLongestSubstring("abcabcbb"))
+}
+```
+
+```rust
+fn length_of_longest_substring(s: &str) -> usize {
+    // TODO: Implement your solution here
+    0
+}
+
+fn main() {
+    assert_eq!(length_of_longest_substring("abcabcbb"), 3);
+    assert_eq!(length_of_longest_substring("bbbbb"), 1);
+    assert_eq!(length_of_longest_substring("pwwkew"), 3);
+    assert_eq!(length_of_longest_substring(""), 0);
+    assert_eq!(length_of_longest_substring("dvdf"), 3);
+    println!("All tests passed!");
+}
+```
+
+```powershell
+function Get-LongestSubstringLength {
+    param([string]$Text)
+    # TODO: Implement your solution here
+}
+
+Get-LongestSubstringLength -Text "abcabcbb"
+Get-LongestSubstringLength -Text "bbbbb"
+Get-LongestSubstringLength -Text "pwwkew"
+Get-LongestSubstringLength -Text ""
+Get-LongestSubstringLength -Text "dvdf"
 ```
 
 ## Hints

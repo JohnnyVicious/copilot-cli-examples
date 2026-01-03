@@ -32,7 +32,7 @@ Output: []
 - The number of nodes in the tree is in the range [0, 2000]
 - -1000 <= Node.val <= 1000
 
-## Solution Template (Python)
+## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
 
 ```python
 from typing import Optional, List
@@ -47,57 +47,99 @@ class TreeNode:
 
 
 def level_order_traversal(root: Optional[TreeNode]) -> List[List[int]]:
-    """
-    Return level order traversal of binary tree
-    
-    Args:
-        root: Root node of binary tree
-    
-    Returns:
-        List of lists, each containing values at that level
-    """
+    """Return level order traversal of binary tree."""
     # TODO: Implement your solution here
-    pass
+    return []
 
 
-# Test helper
 def build_tree(values: List) -> Optional[TreeNode]:
-    """Build a tree from list representation"""
+    """Build a tree from list representation."""
     if not values:
         return None
-    
     root = TreeNode(values[0])
     queue = deque([root])
     i = 1
-    
     while queue and i < len(values):
         node = queue.popleft()
-        
         if i < len(values) and values[i] is not None:
             node.left = TreeNode(values[i])
             queue.append(node.left)
         i += 1
-        
         if i < len(values) and values[i] is not None:
             node.right = TreeNode(values[i])
             queue.append(node.right)
         i += 1
-    
     return root
 
 
-# Test cases
 if __name__ == "__main__":
     tree1 = build_tree([3, 9, 20, None, None, 15, 7])
     assert level_order_traversal(tree1) == [[3], [9, 20], [15, 7]]
-    
     tree2 = build_tree([1])
     assert level_order_traversal(tree2) == [[1]]
-    
     tree3 = build_tree([])
     assert level_order_traversal(tree3) == []
-    
     print("All tests passed!")
+```
+
+```go
+package main
+
+import "fmt"
+
+type TreeNode struct {
+    Val   int
+    Left  *TreeNode
+    Right *TreeNode
+}
+
+func levelOrderTraversal(root *TreeNode) [][]int {
+    // TODO: Implement your solution here
+    return [][]int{}
+}
+
+func main() {
+    fmt.Println(levelOrderTraversal(nil))
+}
+```
+
+```rust
+#[derive(Debug)]
+struct TreeNode {
+    val: i32,
+    left: Option<Box<TreeNode>>,
+    right: Option<Box<TreeNode>>,
+}
+
+fn level_order_traversal(root: Option<Box<TreeNode>>) -> Vec<Vec<i32>> {
+    // TODO: Implement your solution here
+    Vec::new()
+}
+
+fn main() {
+    assert!(level_order_traversal(None).is_empty());
+    println!("All tests passed!");
+}
+```
+
+```powershell
+class TreeNode {
+    [int]$Val
+    [TreeNode]$Left
+    [TreeNode]$Right
+    TreeNode([int]$Val, [TreeNode]$Left = $null, [TreeNode]$Right = $null) {
+        $this.Val = $Val
+        $this.Left = $Left
+        $this.Right = $Right
+    }
+}
+
+function Get-LevelOrderTraversal {
+    param([TreeNode]$Root)
+    # TODO: Implement your solution here
+}
+
+Get-LevelOrderTraversal -Root $null
 ```
 
 ## Hints

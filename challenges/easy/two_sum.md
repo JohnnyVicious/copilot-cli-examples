@@ -34,30 +34,63 @@ Output: [0,1]
 - -10^9 <= target <= 10^9
 - Only one valid answer exists
 
-## Solution Template (Python)
+## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
 
 ```python
 def two_sum(nums: list[int], target: int) -> list[int]:
-    """
-    Find two indices where nums[i] + nums[j] == target
-    
-    Args:
-        nums: List of integers
-        target: Target sum
-    
-    Returns:
-        List containing two indices
-    """
+    """Find two indices where nums[i] + nums[j] == target."""
     # TODO: Implement your solution here
-    pass
+    return []
 
 
-# Test cases
 if __name__ == "__main__":
     assert two_sum([2, 7, 11, 15], 9) == [0, 1]
     assert two_sum([3, 2, 4], 6) == [1, 2]
     assert two_sum([3, 3], 6) == [0, 1]
     print("All tests passed!")
+```
+
+```go
+package main
+
+import "fmt"
+
+func twoSum(nums []int, target int) []int {
+    // TODO: Implement your solution here
+    return []int{}
+}
+
+func main() {
+    fmt.Println(twoSum([]int{2, 7, 11, 15}, 9))
+}
+```
+
+```rust
+fn two_sum(nums: &[i32], target: i32) -> Option<(usize, usize)> {
+    // TODO: Implement your solution here
+    None
+}
+
+fn main() {
+    assert_eq!(two_sum(&[2, 7, 11, 15], 9), Some((0, 1)));
+    assert_eq!(two_sum(&[3, 2, 4], 6), Some((1, 2)));
+    assert_eq!(two_sum(&[3, 3], 6), Some((0, 1)));
+    println!("All tests passed!");
+}
+```
+
+```powershell
+function Get-TwoSum {
+    param(
+        [int[]]$Nums,
+        [int]$Target
+    )
+    # TODO: Implement your solution here
+}
+
+Get-TwoSum -Nums @(2, 7, 11, 15) -Target 9
+Get-TwoSum -Nums @(3, 2, 4) -Target 6
+Get-TwoSum -Nums @(3, 3) -Target 6
 ```
 
 ## Hints
