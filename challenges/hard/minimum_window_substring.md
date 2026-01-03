@@ -76,9 +76,20 @@ fn min_window(s: &str, t: &str) -> String {
     String::new()
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_min_window() {
+        assert_eq!(min_window("ADOBECODEBANC", "ABC"), "BANC");
+    }
+}
+
 fn main() {
-    assert_eq!(min_window("ADOBECODEBANC", "ABC"), "BANC");
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 
@@ -89,9 +100,23 @@ function Get-MinimumWindowSubstring {
         [string]$Target
     )
     # TODO: Implement your solution here
+    return ""
 }
 
-Get-MinimumWindowSubstring -Source "ADOBECODEBANC" -Target "ABC"
+# Test cases
+$result1 = Get-MinimumWindowSubstring -Source "ADOBECODEBANC" -Target "ABC"
+if ($result1 -ne "BANC") { throw "Test failed: Expected 'BANC' but got '$result1'" }
+
+$result2 = Get-MinimumWindowSubstring -Source "a" -Target "a"
+if ($result2 -ne "a") { throw "Test failed: Expected 'a' but got '$result2'" }
+
+$result3 = Get-MinimumWindowSubstring -Source "a" -Target "aa"
+if ($result3 -ne "") { throw "Test failed: Expected '' but got '$result3'" }
+
+$result4 = Get-MinimumWindowSubstring -Source "ab" -Target "b"
+if ($result4 -ne "b") { throw "Test failed: Expected 'b' but got '$result4'" }
+
+Write-Host "All tests passed!" -ForegroundColor Green
 ```
 
 ## Hints

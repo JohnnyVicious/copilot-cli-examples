@@ -5,14 +5,17 @@ on:
     paths:
       - "tests/python/**"
       - "results/python/**"
+      - ".github/workflows/python-tests.yml"
       - "!tests/python/**/*.md"
       - "!results/python/**/*.md"
   pull_request:
     paths:
       - "tests/python/**"
       - "results/python/**"
+      - ".github/workflows/python-tests.yml"
       - "!tests/python/**/*.md"
       - "!results/python/**/*.md"
+  workflow_dispatch:
 
 jobs:
   test:
@@ -26,11 +29,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
+          # cache: "pip" # Disabled until tests/python/requirements.txt exists
+          # cache-dependency-path: tests/python/requirements.txt
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f tests/python/requirements.txt ]; then pip install -r tests/python/requirements.txt; fi
           python -m pip install pytest
       - name: Run pytest
         run: |

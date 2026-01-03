@@ -5,14 +5,17 @@ on:
     paths:
       - "tests/rust/**"
       - "results/rust/**"
+      - ".github/workflows/rust-tests.yml"
       - "!tests/rust/**/*.md"
       - "!results/rust/**/*.md"
   pull_request:
     paths:
       - "tests/rust/**"
       - "results/rust/**"
+      - ".github/workflows/rust-tests.yml"
       - "!tests/rust/**/*.md"
       - "!results/rust/**/*.md"
+  workflow_dispatch:
 
 jobs:
   test:
@@ -24,10 +27,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Set up Rust toolchain
         uses: dtolnay/rust-toolchain@stable
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
       - name: Run cargo test
+        working-directory: tests/rust
         run: |
           if [ -f Cargo.toml ]; then
-            cargo test --all --locked --all-targets
+            cargo test --all --all-targets
           else
             echo "No Cargo.toml found; skipping cargo test"
           fi
