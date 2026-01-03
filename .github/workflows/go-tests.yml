@@ -1,14 +1,17 @@
 name: Go Tests
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - "tests/go/**"
       - "results/go/**"
+      - ".github/workflows/go-tests.yml"
   pull_request:
     paths:
       - "tests/go/**"
       - "results/go/**"
+      - ".github/workflows/go-tests.yml"
 
 jobs:
   test:
