@@ -6,11 +6,15 @@ on:
       - "tests/python/**"
       - "results/python/**"
       - ".github/workflows/python-tests.yml"
+      - "!tests/python/**/*.md"
+      - "!results/python/**/*.md"
   pull_request:
     paths:
       - "tests/python/**"
       - "results/python/**"
       - ".github/workflows/python-tests.yml"
+      - "!tests/python/**/*.md"
+      - "!results/python/**/*.md"
   workflow_dispatch:
 
 jobs:

@@ -6,11 +6,15 @@ on:
       - "tests/go/**"
       - "results/go/**"
       - ".github/workflows/go-tests.yml"
+      - "!tests/go/**/*.md"
+      - "!results/go/**/*.md"
   pull_request:
     paths:
       - "tests/go/**"
       - "results/go/**"
       - ".github/workflows/go-tests.yml"
+      - "!tests/go/**/*.md"
+      - "!results/go/**/*.md"
   workflow_dispatch:
 
 jobs:

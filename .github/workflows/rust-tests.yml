@@ -6,11 +6,15 @@ on:
       - "tests/rust/**"
       - "results/rust/**"
       - ".github/workflows/rust-tests.yml"
+      - "!tests/rust/**/*.md"
+      - "!results/rust/**/*.md"
   pull_request:
     paths:
       - "tests/rust/**"
       - "results/rust/**"
       - ".github/workflows/rust-tests.yml"
+      - "!tests/rust/**/*.md"
+      - "!results/rust/**/*.md"
   workflow_dispatch:
 
 jobs:
