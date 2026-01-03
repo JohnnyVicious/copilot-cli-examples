@@ -96,9 +96,20 @@ function Get-WordLadderLength {
         [string[]]$WordList
     )
     # TODO: Implement your solution here
+    return 0
 }
 
-Get-WordLadderLength -BeginWord "hit" -EndWord "cog" -WordList @("hot","dot","dog","lot","log","cog")
+# Test cases
+$result1 = Get-WordLadderLength -BeginWord "hit" -EndWord "cog" -WordList @("hot","dot","dog","lot","log","cog")
+if ($result1 -ne 5) { throw "Test failed: Expected 5 but got $result1" }
+
+$result2 = Get-WordLadderLength -BeginWord "hit" -EndWord "cog" -WordList @("hot","dot","dog","lot","log")
+if ($result2 -ne 0) { throw "Test failed: Expected 0 but got $result2" }
+
+$result3 = Get-WordLadderLength -BeginWord "a" -EndWord "c" -WordList @("a","b","c")
+if ($result3 -ne 2) { throw "Test failed: Expected 2 but got $result3" }
+
+Write-Host "All tests passed!" -ForegroundColor Green
 ```
 
 ## Hints

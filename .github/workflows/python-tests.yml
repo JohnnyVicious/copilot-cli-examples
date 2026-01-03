@@ -1,7 +1,6 @@
 name: Python Tests
 
 on:
-  workflow_dispatch:
   push:
     paths:
       - "tests/python/**"
@@ -16,6 +15,7 @@ on:
       - ".github/workflows/python-tests.yml"
       - "!tests/python/**/*.md"
       - "!results/python/**/*.md"
+  workflow_dispatch:
 
 jobs:
   test:

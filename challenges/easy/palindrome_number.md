@@ -69,12 +69,23 @@ fn is_palindrome(x: i32) -> bool {
     false
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_is_palindrome() {
+        assert!(is_palindrome(121));
+        assert!(!is_palindrome(-121));
+        assert!(!is_palindrome(10));
+        assert!(is_palindrome(0));
+    }
+}
+
 fn main() {
-    assert!(is_palindrome(121));
-    assert!(!is_palindrome(-121));
-    assert!(!is_palindrome(10));
-    assert!(is_palindrome(0));
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 
@@ -82,12 +93,23 @@ fn main() {
 function Test-PalindromeNumber {
     param([int]$Number)
     # TODO: Implement your solution here
+    return $false
 }
 
-Test-PalindromeNumber -Number 121
-Test-PalindromeNumber -Number -121
-Test-PalindromeNumber -Number 10
-Test-PalindromeNumber -Number 0
+# Test cases
+$result1 = Test-PalindromeNumber -Number 121
+if ($result1 -ne $true) { throw "Test failed: 121 should be a palindrome" }
+
+$result2 = Test-PalindromeNumber -Number -121
+if ($result2 -ne $false) { throw "Test failed: -121 should not be a palindrome" }
+
+$result3 = Test-PalindromeNumber -Number 10
+if ($result3 -ne $false) { throw "Test failed: 10 should not be a palindrome" }
+
+$result4 = Test-PalindromeNumber -Number 0
+if ($result4 -ne $true) { throw "Test failed: 0 should be a palindrome" }
+
+Write-Host "All tests passed!" -ForegroundColor Green
 ```
 
 ## Hints

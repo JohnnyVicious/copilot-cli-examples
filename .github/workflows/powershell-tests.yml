@@ -1,7 +1,6 @@
 name: PowerShell Tests
 
 on:
-  workflow_dispatch:
   push:
     paths:
       - "tests/powershell/**"
@@ -16,6 +15,7 @@ on:
       - ".github/workflows/powershell-tests.yml"
       - "!tests/powershell/**/*.md"
       - "!results/powershell/**/*.md"
+  workflow_dispatch:
 
 jobs:
   test:

@@ -70,13 +70,24 @@ fn length_of_longest_substring(s: &str) -> usize {
     0
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_length_of_longest_substring() {
+        assert_eq!(length_of_longest_substring("abcabcbb"), 3);
+        assert_eq!(length_of_longest_substring("bbbbb"), 1);
+        assert_eq!(length_of_longest_substring("pwwkew"), 3);
+        assert_eq!(length_of_longest_substring(""), 0);
+        assert_eq!(length_of_longest_substring("dvdf"), 3);
+    }
+}
+
 fn main() {
-    assert_eq!(length_of_longest_substring("abcabcbb"), 3);
-    assert_eq!(length_of_longest_substring("bbbbb"), 1);
-    assert_eq!(length_of_longest_substring("pwwkew"), 3);
-    assert_eq!(length_of_longest_substring(""), 0);
-    assert_eq!(length_of_longest_substring("dvdf"), 3);
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 
@@ -84,13 +95,26 @@ fn main() {
 function Get-LongestSubstringLength {
     param([string]$Text)
     # TODO: Implement your solution here
+    return 0
 }
 
-Get-LongestSubstringLength -Text "abcabcbb"
-Get-LongestSubstringLength -Text "bbbbb"
-Get-LongestSubstringLength -Text "pwwkew"
-Get-LongestSubstringLength -Text ""
-Get-LongestSubstringLength -Text "dvdf"
+# Test cases
+$result1 = Get-LongestSubstringLength -Text "abcabcbb"
+if ($result1 -ne 3) { throw "Test failed: 'abcabcbb' should return 3 but got $result1" }
+
+$result2 = Get-LongestSubstringLength -Text "bbbbb"
+if ($result2 -ne 1) { throw "Test failed: 'bbbbb' should return 1 but got $result2" }
+
+$result3 = Get-LongestSubstringLength -Text "pwwkew"
+if ($result3 -ne 3) { throw "Test failed: 'pwwkew' should return 3 but got $result3" }
+
+$result4 = Get-LongestSubstringLength -Text ""
+if ($result4 -ne 0) { throw "Test failed: '' should return 0 but got $result4" }
+
+$result5 = Get-LongestSubstringLength -Text "dvdf"
+if ($result5 -ne 3) { throw "Test failed: 'dvdf' should return 3 but got $result5" }
+
+Write-Host "All tests passed!" -ForegroundColor Green
 ```
 
 ## Hints

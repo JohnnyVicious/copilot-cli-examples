@@ -71,11 +71,22 @@ fn two_sum(nums: &[i32], target: i32) -> Option<(usize, usize)> {
     None
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_two_sum() {
+        assert_eq!(two_sum(&[2, 7, 11, 15], 9), Some((0, 1)));
+        assert_eq!(two_sum(&[3, 2, 4], 6), Some((1, 2)));
+        assert_eq!(two_sum(&[3, 3], 6), Some((0, 1)));
+    }
+}
+
 fn main() {
-    assert_eq!(two_sum(&[2, 7, 11, 15], 9), Some((0, 1)));
-    assert_eq!(two_sum(&[3, 2, 4], 6), Some((1, 2)));
-    assert_eq!(two_sum(&[3, 3], 6), Some((0, 1)));
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 
@@ -86,11 +97,35 @@ function Get-TwoSum {
         [int]$Target
     )
     # TODO: Implement your solution here
+    return @()
 }
 
-Get-TwoSum -Nums @(2, 7, 11, 15) -Target 9
-Get-TwoSum -Nums @(3, 2, 4) -Target 6
-Get-TwoSum -Nums @(3, 3) -Target 6
+# Test cases
+$result1 = Get-TwoSum -Nums @(2, 7, 11, 15) -Target 9
+if ($result1.Count -ne 2) { 
+    throw "Test failed: Expected array of length 2 but got $($result1.Count)" 
+}
+if (($result1[0] -ne 0) -or ($result1[1] -ne 1)) {
+    throw "Test failed: Expected [0, 1] but got [$($result1 -join ', ')]"
+}
+
+$result2 = Get-TwoSum -Nums @(3, 2, 4) -Target 6
+if ($result2.Count -ne 2) { 
+    throw "Test failed: Expected array of length 2 but got $($result2.Count)" 
+}
+if (($result2[0] -ne 1) -or ($result2[1] -ne 2)) {
+    throw "Test failed: Expected [1, 2] but got [$($result2 -join ', ')]"
+}
+
+$result3 = Get-TwoSum -Nums @(3, 3) -Target 6
+if ($result3.Count -ne 2) { 
+    throw "Test failed: Expected array of length 2 but got $($result3.Count)" 
+}
+if (($result3[0] -ne 0) -or ($result3[1] -ne 1)) {
+    throw "Test failed: Expected [0, 1] but got [$($result3 -join ', ')]"
+}
+
+Write-Host "All tests passed!" -ForegroundColor Green
 ```
 
 ## Hints

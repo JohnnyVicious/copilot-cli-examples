@@ -1,7 +1,6 @@
 name: Rust Tests
 
 on:
-  workflow_dispatch:
   push:
     paths:
       - "tests/rust/**"
@@ -16,6 +15,7 @@ on:
       - ".github/workflows/rust-tests.yml"
       - "!tests/rust/**/*.md"
       - "!results/rust/**/*.md"
+  workflow_dispatch:
 
 jobs:
   test:

@@ -116,9 +116,20 @@ fn level_order_traversal(root: Option<Box<TreeNode>>) -> Vec<Vec<i32>> {
     Vec::new()
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[ignore] // Remove this attribute once you've implemented the function
+    fn test_level_order_traversal() {
+        assert!(level_order_traversal(None).is_empty());
+    }
+}
+
 fn main() {
-    assert!(level_order_traversal(None).is_empty());
-    println!("All tests passed!");
+    println!("Run tests with: cargo test");
+    println!("Run ignored tests with: cargo test -- --ignored");
 }
 ```
 
@@ -137,9 +148,18 @@ class TreeNode {
 function Get-LevelOrderTraversal {
     param([TreeNode]$Root)
     # TODO: Implement your solution here
+    return @()
 }
 
-Get-LevelOrderTraversal -Root $null
+# Test cases
+# Test with null root
+$result1 = Get-LevelOrderTraversal -Root $null
+if ($result1.Count -ne 0) { 
+    throw "Test failed: null root should return empty array" 
+}
+
+Write-Host "All tests passed!" -ForegroundColor Green
+Write-Host "Note: Additional tests with complex tree structures can be added after implementing helper functions" -ForegroundColor Yellow
 ```
 
 ## Hints
