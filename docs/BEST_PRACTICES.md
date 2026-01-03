@@ -81,6 +81,8 @@ def binary_search(arr: list[int], target: int) -> int:
 
 ## Working with Different Languages
 
+The challenges include solution templates for Python 3.11+, Go, Rust, and PowerShell Core—tailor your prompts and examples to the language you pick so Copilot can stay consistent.
+
 ### Python Best Practices
 
 ```python
@@ -149,6 +151,23 @@ func processData(data []byte) error {
     // Process data
     return nil
 }
+```
+
+### PowerShell Core Best Practices
+
+```powershell
+# Use singular/plural naming and PascalCase for functions
+function Get-UserSummary {
+    param(
+        [Parameter(Mandatory)]
+        [string]$UserName
+    )
+    # Copilot will suggest implementation
+}
+
+# Favor explicit types and pipeline-friendly output
+[int]$count = 0
+Get-Process | Where-Object { $_.CPU -gt 1 } | Select-Object -First 5
 ```
 
 ## Testing

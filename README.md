@@ -29,6 +29,16 @@ copilot-cli-examples/
 │   ├── easy/
 │   ├── medium/
 │   └── hard/
+├── results/
+│   ├── python/
+│   ├── go/
+│   ├── rust/
+│   └── powershell/
+├── tests/
+│   ├── python/
+│   ├── go/
+│   ├── rust/
+│   └── powershell/
 ├── .claude/
 │   └── skills/
 ├── docs/
@@ -40,11 +50,14 @@ copilot-cli-examples/
 ## 🚀 Quick Start
 
 1. **Read**: `docs/GETTING_STARTED.md` for workflow guidance
-2. **Practice**: Open any file in `challenges/` and work through the prompts with Copilot
+2. **Practice**: Open any file in `challenges/` and work through the prompts with Copilot using the language template you prefer (Python 3.11+, Go, Rust, or PowerShell Core)
+3. **Save**: Store solutions under `results/<language>/` and keep language-specific tests under `tests/<language>/`
 
 ## 📖 What's Included
 
-- **Challenges**: Nine algorithmic problems across easy, medium, and hard categories with prompts, constraints, and hints.
+- **Challenges**: Nine algorithmic problems across easy, medium, and hard categories with prompts, constraints, hints, and solution templates for Python 3.11+, Go, Rust, and PowerShell Core.
+- **Results**: Language-separated folders under `results/` for storing completed solutions and artifacts.
+- **Tests**: Language-separated folders under `tests/` for storing unit/integration tests and fixtures.
 - **Documentation**:
   - `docs/GETTING_STARTED.md` — onboarding and Copilot CLI tips
   - `docs/BEST_PRACTICES.md` — conventions, testing strategies, and security notes

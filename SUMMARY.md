@@ -2,7 +2,9 @@
 
 ## Repository Focus
 
-- **Challenges**: Nine algorithmic problems (easy/medium/hard) with prompts, constraints, and hints.
+- **Challenges**: Nine algorithmic problems (easy/medium/hard) with prompts, constraints, hints, and solution templates for Python 3.11+, Go, Rust, and PowerShell Core.
+- **Results**: `results/<language>/` holds completed solutions and artifacts per language.
+- **Tests**: `tests/<language>/` stores language-specific test code and fixtures.
 - **Documentation**: Getting started guidance and best practices for working with Copilot CLI.
 - **Skills**: Built-in prompting skills under `.claude/skills/` to accelerate Copilot CLI workflows.
 
