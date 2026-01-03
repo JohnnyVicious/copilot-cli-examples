@@ -97,13 +97,26 @@ fn main() {
 function Test-ValidParentheses {
     param([string]$Input)
     # TODO: Implement your solution here
+    return $false
 }
 
-Test-ValidParentheses -Input "()"
-Test-ValidParentheses -Input "()[]{}"
-Test-ValidParentheses -Input "(]"
-Test-ValidParentheses -Input "([)]"
-Test-ValidParentheses -Input "{[]}"
+# Test cases
+$result1 = Test-ValidParentheses -Input "()"
+if ($result1 -ne $true) { throw "Test failed: '()' should be valid" }
+
+$result2 = Test-ValidParentheses -Input "()[]{}"
+if ($result2 -ne $true) { throw "Test failed: '()[]{}' should be valid" }
+
+$result3 = Test-ValidParentheses -Input "(]"
+if ($result3 -ne $false) { throw "Test failed: '(]' should be invalid" }
+
+$result4 = Test-ValidParentheses -Input "([)]"
+if ($result4 -ne $false) { throw "Test failed: '([)]' should be invalid" }
+
+$result5 = Test-ValidParentheses -Input "{[]}"
+if ($result5 -ne $true) { throw "Test failed: '{[]}' should be valid" }
+
+Write-Host "All tests passed!" -ForegroundColor Green
 ```
 
 ## Hints

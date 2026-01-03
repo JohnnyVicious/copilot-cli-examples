@@ -88,9 +88,46 @@ fn main() {
 function Get-AnagramGroups {
     param([string[]]$Words)
     # TODO: Implement your solution here
+    return @()
 }
 
-Get-AnagramGroups -Words @("eat","tea","tan","ate","nat","bat")
+# Test cases
+$result1 = Get-AnagramGroups -Words @("eat","tea","tan","ate","nat","bat")
+# Expected output: groups containing ["bat"], ["nat","tan"], ["ate","eat","tea"]
+# We'll check that we have 3 groups and all words are present
+if ($result1.Count -ne 3) { 
+    throw "Test failed: Expected 3 groups but got $($result1.Count)" 
+}
+# Flatten nested arrays to check all words are present
+$allWords = @()
+foreach ($group in $result1) {
+    if ($null -ne $group) {
+        $allWords += $group
+    }
+}
+$allWords = $allWords | Sort-Object
+$expectedWords = @("ate","bat","eat","nat","tan","tea") | Sort-Object
+if (($allWords -join ',') -ne ($expectedWords -join ',')) {
+    throw "Test failed: Not all words are grouped correctly. Got: $($allWords -join ',')"
+}
+
+$result2 = Get-AnagramGroups -Words @("")
+if ($result2.Count -ne 1) { 
+    throw "Test failed: Expected 1 group but got $($result2.Count)" 
+}
+if (($null -eq $result2[0]) -or ($result2[0].Count -ne 1) -or ($result2[0][0] -ne "")) {
+    throw "Test failed: Expected [['']] but got different result"
+}
+
+$result3 = Get-AnagramGroups -Words @("a")
+if ($result3.Count -ne 1) { 
+    throw "Test failed: Expected 1 group but got $($result3.Count)" 
+}
+if (($null -eq $result3[0]) -or ($result3[0].Count -ne 1) -or ($result3[0][0] -ne "a")) {
+    throw "Test failed: Expected [['a']] but got different result"
+}
+
+Write-Host "All tests passed!" -ForegroundColor Green
 ```
 
 ## Hints

@@ -137,9 +137,18 @@ class TreeNode {
 function Get-LevelOrderTraversal {
     param([TreeNode]$Root)
     # TODO: Implement your solution here
+    return @()
 }
 
-Get-LevelOrderTraversal -Root $null
+# Test cases
+# Test with null root
+$result1 = Get-LevelOrderTraversal -Root $null
+if ($result1.Count -ne 0) { 
+    throw "Test failed: null root should return empty array" 
+}
+
+Write-Host "All tests passed!" -ForegroundColor Green
+Write-Host "Note: Additional tests with complex tree structures can be added after implementing helper functions" -ForegroundColor Yellow
 ```
 
 ## Hints

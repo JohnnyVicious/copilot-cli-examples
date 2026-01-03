@@ -153,9 +153,18 @@ class ListNode {
 function Merge-KLists {
     param([ListNode[]]$Lists)
     # TODO: Implement your solution here
+    return $null
 }
 
-Merge-KLists -Lists @()
+# Test cases
+# Test with empty array
+$result1 = Merge-KLists -Lists @()
+if ($result1 -ne $null) { 
+    throw "Test failed: empty array should return null" 
+}
+
+Write-Host "All tests passed!" -ForegroundColor Green
+Write-Host "Note: Additional tests with complex linked lists can be added after implementing helper functions" -ForegroundColor Yellow
 ```
 
 ## Hints
