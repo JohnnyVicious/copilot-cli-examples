@@ -5,10 +5,16 @@ on:
     paths:
       - "tests/powershell/**"
       - "results/powershell/**"
+    paths-ignore:
+      - "tests/powershell/**/*.md"
+      - "results/powershell/**/*.md"
   pull_request:
     paths:
       - "tests/powershell/**"
       - "results/powershell/**"
+    paths-ignore:
+      - "tests/powershell/**/*.md"
+      - "results/powershell/**/*.md"
 
 jobs:
   test:

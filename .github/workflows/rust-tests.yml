@@ -5,10 +5,16 @@ on:
     paths:
       - "tests/rust/**"
       - "results/rust/**"
+    paths-ignore:
+      - "tests/rust/**/*.md"
+      - "results/rust/**/*.md"
   pull_request:
     paths:
       - "tests/rust/**"
       - "results/rust/**"
+    paths-ignore:
+      - "tests/rust/**/*.md"
+      - "results/rust/**/*.md"
 
 jobs:
   test:
