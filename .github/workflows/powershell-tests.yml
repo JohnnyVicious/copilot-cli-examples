@@ -1,6 +1,7 @@
 name: PowerShell Tests
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - "tests/powershell/**"
@@ -22,10 +23,16 @@ jobs:
         shell: pwsh
         run: |
           if (Test-Path "tests/powershell") {
-            if (-not (Get-Module -ListAvailable -Name Pester)) {
-              Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck
+            $testFiles = Get-ChildItem -Path "tests/powershell" -Filter "*.Tests.ps1" -Recurse
+            if ($testFiles.Count -gt 0) {
+              if (-not (Get-Module -ListAvailable -Name Pester)) {
+                Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck
+              }
+              Invoke-Pester -Path "tests/powershell" -CI
             }
-            Invoke-Pester -Path "tests/powershell" -CI
+            else {
+              Write-Host "No PowerShell test files (*.Tests.ps1) found in tests/powershell"
+            }
           }
           else {
             Write-Host "No PowerShell tests found in tests/powershell"
