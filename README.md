@@ -48,6 +48,8 @@ copilot-cli-examples/
 
 See [docs/language-support.md](docs/language-support.md) for the current languages and versions.
 
+Copilot instructions: if both `AGENTS.md` and `.github/copilot-instructions.md` exist, treat `AGENTS.md` as the source of truth for this Copilot CLI-focused repository.
+
 ## 🚀 Quick Start
 
 1. **Read**: `docs/GETTING_STARTED.md` for workflow guidance
@@ -56,21 +58,13 @@ See [docs/language-support.md](docs/language-support.md) for the current languag
 
 ## 📖 What's Included
 
-- **Challenges**: Nine algorithmic problems across easy, medium, and hard categories with prompts, constraints, hints, and solution templates for the languages listed in [language support](docs/language-support.md).
+- **Challenges**: Algorithmic problems across easy, medium, and hard categories with prompts, constraints, hints, and solution templates for the languages listed in [language support](docs/language-support.md).
 - **Results**: Language-separated folders under `results/` for storing completed solutions and artifacts.
 - **Tests**: Language-separated folders under `tests/` for storing unit/integration tests and fixtures.
 - **Documentation**:
   - `docs/GETTING_STARTED.md` — onboarding and Copilot CLI tips
   - `docs/BEST_PRACTICES.md` — conventions, testing strategies, and security notes
-- **Skills** (`.claude/skills/`):
-  - **brainstorming** — clarify requirements and design before coding
-  - **dispatching-parallel-agents** — split independent tasks across agents
-  - **subagent-driven-development** — plan and execute work in reviewable tasks
-  - **using-git-worktrees** — isolate work in separate worktrees safely
-  - **writing-skills** — structured prompting patterns and examples
-  - **requesting-code-review** — invoke the `code-reviewer` agent_type with the provided template
-  - **github-copilot** — connect to Copilot models and tooling
-  - **rust-developer** — Rust-focused prompts and guardrails
+- **Skills** (`.claude/skills/`): Reusable instructions and skills for Copilot workflows, complementing the challenge documentation.
 
 ## 🤖 Using Copilot CLI Here
 
@@ -86,6 +80,7 @@ See [docs/language-support.md](docs/language-support.md) for the current languag
 ## 🤝 Contributing
 
 Suggestions and contributions are welcome:
+
 - Add new challenges or refine existing ones
 - Improve documentation and walkthroughs
 - Expand validation to cover new content types
