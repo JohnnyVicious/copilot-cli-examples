@@ -37,13 +37,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
 
       - name: Cache cspell
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-cspell-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-cspell-v8
           restore-keys: |
             ${{ runner.os }}-cspell-
 
