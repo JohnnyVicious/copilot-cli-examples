@@ -34,7 +34,7 @@ Output: [0,1]
 - -10^9 <= target <= 10^9
 - Only one valid answer exists
 
-## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
+## Solution Templates (see [language-support](../../docs/language-support.md))
 
 ```python
 def two_sum(nums: list[int], target: int) -> list[int]:

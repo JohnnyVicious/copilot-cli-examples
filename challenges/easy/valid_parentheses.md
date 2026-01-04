@@ -44,7 +44,7 @@ Output: true
 - 1 <= s.length <= 10^4
 - s consists of parentheses only '()[]{}'
 
-## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
+## Solution Templates (see [language-support](../../docs/language-support.md))
 
 ```python
 def is_valid_parentheses(s: str) -> bool:

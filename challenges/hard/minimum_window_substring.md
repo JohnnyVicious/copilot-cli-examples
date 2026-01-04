@@ -35,7 +35,7 @@ Since the largest window of s only has one 'a', return empty string.
 - 1 <= m, n <= 10^5
 - s and t consist of uppercase and lowercase English letters
 
-## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
+## Solution Templates (see [language-support](../../docs/language-support.md))
 
 ```python
 from collections import Counter, defaultdict

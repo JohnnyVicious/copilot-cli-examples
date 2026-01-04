@@ -2,7 +2,7 @@
 
 ## Repository Focus
 
-- **Challenges**: Nine algorithmic problems (easy/medium/hard) with prompts, constraints, hints, and solution templates for Python 3.11+, Go, Rust, and PowerShell Core.
+- **Challenges**: Nine algorithmic problems (easy/medium/hard) with prompts, constraints, hints, and solution templates for the languages listed in [docs/language-support.md](docs/language-support.md).
 - **Results**: `results/<language>/` holds completed solutions and artifacts per language.
 - **Tests**: `tests/<language>/` stores language-specific test code and fixtures.
 - **Documentation**: Getting started guidance and best practices for working with Copilot CLI.
