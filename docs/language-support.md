@@ -18,3 +18,4 @@ This repository centralizes supported languages, versions, and where to place te
 - Challenges reference this document for supported languages and template locations; add new templates under the matching `templates/<language>/` folder.
 - Keep tests and solution artifacts in the corresponding `tests/<language>/` and `results/<language>/` directories.
 - When adding a new language or version, update this table and create aligned `tests/`, `results/`, and `templates/` subfolders.
+- See [Running Solutions](GETTING_STARTED.md#running-solutions) in the Getting Started guide for copy-pastable run and test commands.

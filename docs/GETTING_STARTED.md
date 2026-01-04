@@ -28,6 +28,27 @@ This repository pairs GitHub Copilot CLI with a curated set of coding challenges
 - Ask for targeted help (e.g., “generate edge cases for sliding window solution”).
 - Use the guidance in `docs/BEST_PRACTICES.md` as a checklist.
 
+
+## Running Solutions
+
+Use these commands to run and test your solutions. See [language-support](language-support.md) for version details and directory structure.
+
+| Language | Run Command | Test Command |
+| --- | --- | --- |
+| Python | `python templates/python/main.py` | `python -m pytest tests/python/` |
+| Go | `go run templates/go/main.go` | `go test ./tests/go/...` |
+| Rust | `cargo run --manifest-path templates/rust/Cargo.toml` | `cargo test --manifest-path templates/rust/Cargo.toml` |
+| PowerShell | `pwsh templates/powershell/main.ps1` | `pwsh -Command "Invoke-Pester tests/powershell/"` |
+| Java 21 | `java templates/java21/Main.java` | `java -cp .:junit-platform-console-standalone.jar org.junit.platform.console.ConsoleLauncher --scan-classpath --classpath tests/java21` |
+| Java 25 | `java templates/java25/Main.java` | `java -cp .:junit-platform-console-standalone.jar org.junit.platform.console.ConsoleLauncher --scan-classpath --classpath tests/java25` |
+| C# 12 | `dotnet run --project templates/csharp12` | `dotnet test tests/csharp12` |
+| C# 14 | `dotnet run --project templates/csharp14` | `dotnet test tests/csharp14` |
+
+**Notes:**
+- Commands assume you're in the repository root.
+- For Java, download [JUnit Console Standalone](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/) JAR if running tests directly.
+- Adjust file names (e.g., `main.py`, `Main.java`) to match your solution file name.
+
 ## Contributing
 - Place new challenges under `challenges/<difficulty>/` with clear statements, examples, and hints.
 - Update documentation when adding or modifying content.
