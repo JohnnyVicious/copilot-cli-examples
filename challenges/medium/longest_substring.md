@@ -31,7 +31,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 - 0 <= s.length <= 5 * 10^4
 - s consists of English letters, digits, symbols and spaces.
 
-## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
+## Solution Templates (see [language-support](../../docs/language-support.md))
 
 ```python
 def length_of_longest_substring(s: str) -> int:

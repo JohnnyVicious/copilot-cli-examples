@@ -81,7 +81,7 @@ def binary_search(arr: list[int], target: int) -> int:
 
 ## Working with Different Languages
 
-The challenges include solution templates for Python 3.11+, Go, Rust, and PowerShell Core—tailor your prompts and examples to the language you pick so Copilot can stay consistent.
+The challenges include solution templates for the languages listed in [language-support](language-support.md)—tailor your prompts and examples to the language you pick so Copilot can stay consistent.
 
 ### Python Best Practices
 

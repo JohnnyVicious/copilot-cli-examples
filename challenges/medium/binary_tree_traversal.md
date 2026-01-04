@@ -32,7 +32,7 @@ Output: []
 - The number of nodes in the tree is in the range [0, 2000]
 - -1000 <= Node.val <= 1000
 
-## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
+## Solution Templates (see [language-support](../../docs/language-support.md))
 
 ```python
 from typing import Optional, List

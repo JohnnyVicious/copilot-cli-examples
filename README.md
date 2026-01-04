@@ -17,7 +17,7 @@ A streamlined proof-of-concept showing how to use GitHub Copilot CLI with curate
 ## 🎯 Purpose
 
 - Demonstrate Copilot CLI workflows end to end
-- Provide ready-to-use challenges for practicing algorithmic problem solving with solution templates in Python 3.11+, Go, Rust, and PowerShell Core
+- Provide ready-to-use challenges for practicing algorithmic problem solving with solution templates (see [language support](docs/language-support.md) for versions)
 - Offer guidance on setup and best practices when working with Copilot
 - Show how Copilot CLI alone can deliver productive, high-quality results without Codex CLI access
 
@@ -50,12 +50,12 @@ copilot-cli-examples/
 ## 🚀 Quick Start
 
 1. **Read**: `docs/GETTING_STARTED.md` for workflow guidance
-2. **Practice**: Open any file in `challenges/` and work through the prompts with Copilot using the language template you prefer (Python 3.11+, Go, Rust, or PowerShell Core)
+2. **Practice**: Open any file in `challenges/` and work through the prompts with Copilot using the language template you prefer (see [language support](docs/language-support.md))
 3. **Save**: Store solutions under `results/<language>/` and keep language-specific tests under `tests/<language>/`
 
 ## 📖 What's Included
 
-- **Challenges**: Nine algorithmic problems across easy, medium, and hard categories with prompts, constraints, hints, and solution templates for Python 3.11+, Go, Rust, and PowerShell Core.
+- **Challenges**: Nine algorithmic problems across easy, medium, and hard categories with prompts, constraints, hints, and solution templates for the languages listed in [language support](docs/language-support.md).
 - **Results**: Language-separated folders under `results/` for storing completed solutions and artifacts.
 - **Tests**: Language-separated folders under `tests/` for storing unit/integration tests and fixtures.
 - **Documentation**:

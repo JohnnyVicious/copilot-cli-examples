@@ -30,7 +30,7 @@ Output: [["a"]]
 - 0 <= strs[i].length <= 100
 - strs[i] consists of lowercase English letters
 
-## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
+## Solution Templates (see [language-support](../../docs/language-support.md))
 
 ```python
 from typing import List

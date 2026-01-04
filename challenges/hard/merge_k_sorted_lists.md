@@ -41,7 +41,7 @@ Output: []
 - lists[i] is sorted in ascending order
 - The sum of lists[i].length will not exceed 10^4
 
-## Solution Templates (Python 3.11+, Go, Rust, PowerShell Core)
+## Solution Templates (see [language-support](../../docs/language-support.md))
 
 ```python
 from typing import List, Optional
