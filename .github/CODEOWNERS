@@ -1,0 +1,18 @@
+# CODEOWNERS for copilot-cli-examples
+# Routes PRs to appropriate reviewers based on file paths
+# See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Documentation
+docs/** @docs-team
+
+# Challenges
+challenges/** @challenge-team
+
+# Templates
+templates/** @templates-team
+
+# CI/CD workflows
+.github/workflows/** @ci-team
+
+# Note: Replace placeholder team handles (@docs-team, @challenge-team, @templates-team, @ci-team)
+# with actual GitHub team handles or user handles when teams are created.
