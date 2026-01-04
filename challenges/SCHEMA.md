@@ -45,7 +45,9 @@ Technical constraints and boundaries, such as:
 
 Starter code in supported languages (see [language-support](../docs/language-support.md)).
 
-**Section title MUST be:** `Solution Templates (see [language-support](../../docs/language-support.md))`
+**Recommended section title:** `Solution Templates (see [language-support](../../docs/language-support.md))`
+
+The validation script checks for "Solution Templates" in the section heading (with or without the link).
 
 Include templates for:
 
