@@ -24,7 +24,13 @@ Purpose: Copilot CLI-focused challenge and documentation set for practicing work
 
 ## Commit & Pull Request Guidelines
 - Follow observed prefixes (`docs:`, `chore:`) and keep messages imperative and scoped.
-- PRs should summarize changes, link issues when relevant, and include before/after details or screenshots for doc/format changes if helpful.
+- Write PR titles that include the prefix plus a concise scope (e.g., `docs: clarify language support`).
+- In PR descriptions, include:
+  - **Summary**: 2–4 bullets describing the specific changes (what/where/why), noting docs-only when applicable.
+  - **Testing**: Exact commands run, or `not run (reason)`.
+  - **Context/Links**: Issue/PR references or motivation if no issue.
+  - **Before/After**: Screenshots or brief text diffs for UX/docs/format changes.
+  - **Risks/Rollout**: Breaking changes, follow-ups, or flags if relevant.
 - Update documentation when adding or modifying challenges.
 - When committing with Codex, add `Co-authored-by: ChatGPT (Codex CLI) <chatgpt@codex.cli>` so agent use is visible.
 
