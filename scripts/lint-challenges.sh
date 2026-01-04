@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Validates that challenge markdown files contain all required sections
+# Note: We use 'set -uo pipefail' without '-e' to allow graceful error handling
+# during validation (we want to collect all errors, not exit on first failure)
 
 set -uo pipefail
 
