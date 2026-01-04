@@ -1,0 +1,15 @@
+# CODEOWNERS for copilot-cli-examples
+# Routes PRs to appropriate reviewers based on file paths
+# See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Documentation
+docs/** @JohnnyVicious
+
+# Challenges
+challenges/** @JohnnyVicious
+
+# Templates
+templates/** @JohnnyVicious
+
+# CI/CD workflows
+.github/workflows/** @JohnnyVicious
