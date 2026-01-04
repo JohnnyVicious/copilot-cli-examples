@@ -27,6 +27,7 @@ Purpose: Copilot CLI-focused challenge and documentation set for practicing work
 ## Commit & Pull Request Guidelines
 - Follow observed prefixes (`docs:`, `chore:`) and keep messages imperative and scoped.
 - Write PR titles that include the prefix plus a concise scope (e.g., `docs: clarify language support`).
+- Complete the pre-merge checklist in the [PR template](.github/pull_request_template.md) before finalizing your pull request.
 - In PR descriptions, include:
   - **Summary**: 2–4 bullets describing the specific changes (what/where/why), noting docs-only when applicable.
   - **Testing**: Exact commands run, or `not run (reason)`.

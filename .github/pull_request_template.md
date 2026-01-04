@@ -15,12 +15,12 @@
 Closes #
 
 ## Checklist
-- [ ] Changes follow [AGENTS.md](../AGENTS.md) guidelines (commit format, minimal scope)
-- [ ] Documentation updated if needed (see [language-support.md](../docs/language-support.md))
-- [ ] Lint/tests pass or N/A (specify commands in Testing section)
-- [ ] Links and cross-references resolve correctly
+- [ ] Lint passes (`make lint-docs` or N/A)
+- [ ] Tests pass (if applicable)
+- [ ] Docs updated (if applicable)
+- [ ] Commits follow prefix convention (`docs:`, `chore:`, etc.)
+- [ ] Reviewed [AGENTS.md](../AGENTS.md) guidance
 - [ ] No secrets, tokens, or sensitive data included
-- [ ] Template/challenge format matches existing patterns (if applicable)
 
 ## Before/After
 <!-- Screenshots or brief text diffs for UX/docs/format changes -->
