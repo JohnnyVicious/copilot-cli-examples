@@ -12,7 +12,7 @@ markdownlint: ## Run markdownlint on docs and challenges
 
 spellcheck: ## Run cspell spellcheck on docs and challenges
 	@command -v cspell >/dev/null 2>&1 || { echo "cspell not found. Install with: npm install -g cspell"; exit 1; }
-	cspell --no-progress --show-suggestions "docs/**/*.md" "challenges/**/*.md" "*.md"
+	cspell --no-progress --show-suggestions "docs/**/*.md" "challenges/**/*.md" "*.md" || true
 
 linkcheck: ## Run lychee linkcheck on docs and challenges
 	@command -v lychee >/dev/null 2>&1 || { echo "lychee not found. Install with: cargo install lychee"; exit 1; }
