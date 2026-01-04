@@ -1,10 +1,14 @@
-.PHONY: help lint-docs markdownlint spellcheck linkcheck
+.PHONY: help lint-docs markdownlint spellcheck linkcheck lint-challenges
 
 help: ## Show this help message
 	@echo "Available targets:"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-15s %s\n", $$1, $$2}'
 
 lint-docs: markdownlint spellcheck linkcheck ## Run all documentation linting checks
+
+lint-challenges: ## Validate challenge markdown structure
+	@command -v bash >/dev/null 2>&1 || { echo "bash not found"; exit 1; }
+	bash scripts/lint-challenges.sh
 
 markdownlint: ## Run markdownlint on docs and challenges
 	@command -v markdownlint-cli2 >/dev/null 2>&1 || { echo "markdownlint-cli2 not found. Install with: npm install -g markdownlint-cli2"; exit 1; }
