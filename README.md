@@ -76,6 +76,8 @@ Copilot instructions: if both `AGENTS.md` and `.github/copilot-instructions.md` 
 
 - Keep new challenge files under `challenges/<difficulty>/` with clear statements, examples, and hints.
 - Update documentation when adding or modifying challenge content.
+- Run `make lint-docs` to check markdown formatting, spelling, and links before committing changes.
+- See `make help` for available development commands.
 
 ## 🤝 Contributing
 

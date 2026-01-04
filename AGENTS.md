@@ -11,6 +11,8 @@ Purpose: Copilot CLI-focused challenge and documentation set for practicing work
 - No build pipeline here; work directly with Markdown challenges and docs.
 - Search quickly: `rg term challenges/medium` or list files with `rg --files`.
 - Word count check for docs: `wc -w AGENTS.md`.
+- Run `make lint-docs` to check markdown formatting, spelling, and links (requires markdownlint-cli2, cspell, and lychee).
+- Run `make help` for available development commands.
 
 ## Coding Style & Naming Conventions
 - Markdown: sentence-case headings, concise bullets, and fenced code blocks with language tags.

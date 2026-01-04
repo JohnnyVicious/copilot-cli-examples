@@ -1,0 +1,91 @@
+name: Docs CI
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "challenges/**"
+      - "*.md"
+      - ".github/workflows/docs-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  markdownlint:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: |
+            docs/**/*.md
+            challenges/**/*.md
+            *.md
+
+  spellcheck:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Cache cspell
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-cspell-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-cspell-
+
+      - name: Install cspell
+        run: npm install -g cspell@8
+
+      - name: Run spellcheck
+        run: |
+          cspell --no-progress --show-suggestions \
+            "docs/**/*.md" \
+            "challenges/**/*.md" \
+            "*.md"
+
+  linkcheck:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Cache lychee
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/lychee
+          key: ${{ runner.os }}-lychee-v0.17.0
+          restore-keys: |
+            ${{ runner.os }}-lychee-
+
+      - name: Install lychee
+        run: |
+          if [ ! -f ~/.cargo/bin/lychee ]; then
+            cargo install lychee --version 0.17.0
+          fi
+
+      - name: Run linkcheck
+        run: |
+          ~/.cargo/bin/lychee --verbose --no-progress \
+            --exclude-path results \
+            --exclude-path tests \
+            --exclude-path templates \
+            --exclude-path .github \
+            --max-retries 3 \
+            --timeout 10 \
+            "docs/**/*.md" \
+            "challenges/**/*.md" \
+            "*.md"
