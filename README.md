@@ -30,15 +30,14 @@ copilot-cli-examples/
 │   ├── medium/
 │   └── hard/
 ├── results/
-│   ├── python/
-│   ├── go/
-│   ├── rust/
-│   └── powershell/
+│   ├── <language>/
+│   └── ...
 ├── tests/
-│   ├── python/
-│   ├── go/
-│   ├── rust/
-│   └── powershell/
+│   ├── <language>/
+│   └── ...
+├── templates/
+│   ├── <language>/
+│   └── ...
 ├── .claude/
 │   └── skills/
 ├── docs/
@@ -46,6 +45,8 @@ copilot-cli-examples/
 │   └── GETTING_STARTED.md
 └── README.md
 ```
+
+See [docs/language-support.md](docs/language-support.md) for the current languages and versions.
 
 ## 🚀 Quick Start
 
