@@ -28,7 +28,6 @@ This repository pairs GitHub Copilot CLI with a curated set of coding challenges
 - Ask for targeted help (e.g., “generate edge cases for sliding window solution”).
 - Use the guidance in `docs/BEST_PRACTICES.md` as a checklist.
 
-
 ## Running Solutions
 
 Use these commands to run and test your solutions. See [language-support](language-support.md) for version details and directory structure.
