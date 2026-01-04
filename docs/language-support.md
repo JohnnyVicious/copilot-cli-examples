@@ -2,16 +2,27 @@
 
 This repository centralizes supported languages, versions, and where to place templates, tests, and solutions.
 
-| Language | Version / Notes | Tests | Results | Templates |
-| --- | --- | --- | --- | --- |
-| Python | 3.11+ | `tests/python/` | `results/python/` | `templates/python/` |
-| Go | latest stable | `tests/go/` | `results/go/` | `templates/go/` |
-| Rust | stable | `tests/rust/` | `results/rust/` | `templates/rust/` |
-| PowerShell | Core | `tests/powershell/` | `results/powershell/` | `templates/powershell/` |
-| Java | 21 | `tests/java21/` | `results/java21/` | `templates/java21/` |
-| Java | 25 | `tests/java25/` | `results/java25/` | `templates/java25/` |
-| C# | 12 (.NET 8.0) | `tests/csharp12/` | `results/csharp12/` | `templates/csharp12/` |
-| C# | 14 (.NET 10.0) | `tests/csharp14/` | `results/csharp14/` | `templates/csharp14/` |
+## Supported Languages
+
+| Language | Version / Notes | Starter Template | Tests | Results | Templates |
+| --- | --- | --- | --- | --- | --- |
+| Python | 3.11+ | [starter.py](../templates/python/starter.py) | `tests/python/` | `results/python/` | `templates/python/` |
+| Go | latest stable | [starter.go](../templates/go/starter.go) | `tests/go/` | `results/go/` | `templates/go/` |
+| Rust | stable | [starter.rs](../templates/rust/starter.rs) | `tests/rust/` | `results/rust/` | `templates/rust/` |
+| PowerShell | Core | [starter.ps1](../templates/powershell/starter.ps1) | `tests/powershell/` | `results/powershell/` | `templates/powershell/` |
+| Java | 21 | [Starter.java](../templates/java21/Starter.java) | `tests/java21/` | `results/java21/` | `templates/java21/` |
+| Java | 25 | [Starter.java](../templates/java25/Starter.java) | `tests/java25/` | `results/java25/` | `templates/java25/` |
+| C# | 12 (.NET 8.0) | [Starter.cs](../templates/csharp12/Starter.cs) | `tests/csharp12/` | `results/csharp12/` | `templates/csharp12/` |
+| C# | 14 (.NET 10.0) | [Starter.cs](../templates/csharp14/Starter.cs) | `tests/csharp14/` | `results/csharp14/` | `templates/csharp14/` |
+
+## Starter Templates
+
+Each language has a minimal runnable starter template that demonstrates:
+- How to run/build the code
+- Basic input/output operations
+- Standard entrypoint structure
+
+For detailed information about using these templates, see the [templates README](../templates/README.md).
 
 ## Usage
 
