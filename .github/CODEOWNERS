@@ -3,16 +3,13 @@
 # See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
 # Documentation
-docs/** @docs-team
+docs/** @JohnnyVicious
 
 # Challenges
-challenges/** @challenge-team
+challenges/** @JohnnyVicious
 
 # Templates
-templates/** @templates-team
+templates/** @JohnnyVicious
 
 # CI/CD workflows
-.github/workflows/** @ci-team
-
-# Note: Replace placeholder team handles (@docs-team, @challenge-team, @templates-team, @ci-team)
-# with actual GitHub team handles or user handles when teams are created.
+.github/workflows/** @JohnnyVicious
